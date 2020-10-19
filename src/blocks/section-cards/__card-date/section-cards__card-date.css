@@ -1,0 +1,11 @@
+.section-cards__card-date {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: calc(100% - 24px * 2);
+    font-family: 'Sourse Sans Pro', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #b6bcbf;
+}

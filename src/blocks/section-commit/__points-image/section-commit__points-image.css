@@ -1,0 +1,12 @@
+.section-commit__points-image {
+  margin: 0;
+  margin-top: 48px;
+  margin-bottom: 80px;
+  margin-left: 700px;
+  width: 40px;
+  height: 8px;
+}
+
+.section-commit__points-image:hover {
+  cursor: pointer;
+}

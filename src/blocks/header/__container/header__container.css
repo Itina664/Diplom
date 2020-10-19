@@ -1,0 +1,8 @@
+.header__container {
+    height: 77px;
+    padding-left: 104px;
+    padding-right: 101px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

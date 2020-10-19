@@ -1,0 +1,23 @@
+.section-cards__button {
+    margin: 0 auto;
+    margin-left: 576px;
+    margin-top: 64px;
+    margin-bottom: 80px;
+    padding: 0;
+    width: 288px;
+    height: 64px;
+    background: #fff;
+    border-radius: 80px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+    color: #1a1b22;
+}
+
+.section-cards__button:hover {
+    opacity: .9;
+    cursor: pointer;
+}

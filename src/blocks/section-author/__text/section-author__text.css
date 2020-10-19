@@ -1,0 +1,4 @@
+.section-author__text {
+    width: calc(100% - 464px - 56px);
+    margin-top: 51px;
+}

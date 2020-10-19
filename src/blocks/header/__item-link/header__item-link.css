@@ -1,0 +1,21 @@
+.header__item-link {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #b6bcbf;
+}
+
+.header__item-link_active {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 28px;
+}
+
+.header__item-link_active_dark {
+    color: #1a1b22;
+    border-bottom: 3px solid #1a1b22;
+}

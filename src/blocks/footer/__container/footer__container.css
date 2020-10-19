@@ -1,0 +1,9 @@
+.footer__container {
+    margin: 0;
+    padding-left: 104px;
+    padding-right: 106px;
+    height: 80px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

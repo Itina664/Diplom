@@ -1,0 +1,9 @@
+.section-cards__cards-container {
+    margin: 0 auto;
+    padding-top: 64px;
+    width: calc(100% - 104px * 2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #f5f6f7;
+}

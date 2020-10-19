@@ -1,0 +1,13 @@
+@import url(./__cards-container/section-cards__cards-container.css);
+@import url(./__card-link/section-cards__card-link.css);
+@import url(./__card-date/section-cards__card-date.css);
+@import url(./__card-title/section-cards__card-title.css);
+@import url(./__card-text/section-cards__card-text.css);
+@import url(./__card-infoagency/section-cards__card-infoagency.css);
+@import url(./__card-image/section-cards__card-image.css);
+@import url(./__button/section-cards__button.css);
+
+
+.section-cards {
+    background: #f5f6f7;
+}

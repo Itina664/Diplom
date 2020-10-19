@@ -1,0 +1,25 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/section-author/section-author.css);
+@import url(../blocks/section-clients/section-clients.css);
+@import url(../blocks/section-technology/section-technology.css);
+@import url(../blocks/section-title-result/section-title-result.css);
+@import url(../blocks/section-commit/section-commit.css);
+
+.body {
+    width: 100%;
+    background-color: #fff;
+}
+
+.page-about {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+  /*@media screen and (max-width: 768px) {
+    .user-info {
+      flex-direction: column;
+      align-items: center;
+    }*/

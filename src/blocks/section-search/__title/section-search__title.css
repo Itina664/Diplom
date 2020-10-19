@@ -1,0 +1,12 @@
+.section-search__title {
+    margin: auto;
+    padding-top: 80px;
+    font-family: 'Roboto Slab', Arial, sans-serif;  
+    font-style: normal; 
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 64px;
+    text-align: left;
+    max-width: 40%;
+    color: white
+} 

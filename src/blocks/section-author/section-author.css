@@ -1,0 +1,10 @@
+@import url(./__caption/section-author__caption.css);
+@import url(./__comment/section-author__comment.css);
+@import url(./__container/section-author__container.css);
+@import url(./__image/section-author__image.css);
+@import url(./__text/section-author__text.css);
+
+.section-author {
+    margin: 0; 
+    width: 100%;   
+}

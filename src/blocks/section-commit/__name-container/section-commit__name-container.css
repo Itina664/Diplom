@@ -1,0 +1,4 @@
+.section-commit__name-container {
+  width: calc(100% - 64px - 16px - 8px);
+  margin-top: 4px;
+}

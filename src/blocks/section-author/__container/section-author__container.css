@@ -1,0 +1,9 @@
+.section-author__container {
+    margin: 0;
+    margin-left: 104px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: calc(100% - 104px - 216px);
+    display: flex;
+    justify-content: space-between;
+}

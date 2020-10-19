@@ -1,0 +1,15 @@
+.section-search__field-theme {
+    margin-left: 25px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #b6bcbf;
+    border: none;
+    background: none;
+}
+
+.section-search__field-theme:focus {
+    color: #1a1b22;
+}

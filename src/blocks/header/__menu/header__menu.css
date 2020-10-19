@@ -1,0 +1,10 @@
+.header__menu {
+    width: 15%;
+    font-family: 'Roboto', Arial, sans-serif; 
+    font-style: normal;  
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #b6bcbf;
+}

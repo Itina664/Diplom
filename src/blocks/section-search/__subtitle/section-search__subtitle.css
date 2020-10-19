@@ -1,0 +1,12 @@
+.section-search__subtitle {
+    padding-left: 416px;
+    padding-top: 32px;
+    font-family: 'Roboto', Arial, sans-serif;  
+    font-style: normal; 
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    max-width: 35%;
+    color: white
+}

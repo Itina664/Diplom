@@ -1,0 +1,11 @@
+.section-commit__commit-date {
+  margin: 0 auto;
+  margin-top: 24px;
+  width: calc(100% - 24px * 2);
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #b6bcbf;
+}
