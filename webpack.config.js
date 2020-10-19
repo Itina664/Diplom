@@ -15,15 +15,13 @@ module.exports = {
     entry: {
         main: './src/main-page.js',
         about: './src/about-page.js',
+        analytics: './src/analytics.js',
      },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js',
     },
-    devServer: {
-        contentBase: "./dist",
-        hot: true
-    },
+    
     module: {
         rules: [
         { // тут описываются правила
@@ -78,6 +76,12 @@ module.exports = {
             template: './src/about-page.html',
             filename: 'about-page.html',
             chunks: ['about-page.html'],
+        }),
+        new HtmlWebpackPlugin({ // настроили плагин
+            inject: true,
+            template: './src/analytics.html',
+            filename: 'analytics.html',
+            chunks: ['analytics.html'],
         }),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
