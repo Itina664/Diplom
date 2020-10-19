@@ -21,9 +21,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js',
     },
-    devServer: {
+    /*devServer: {
         contentBase: path.join(__dirname, 'dist'),
-    },
+    },*/
     
     module: {
         rules: [
