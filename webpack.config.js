@@ -13,9 +13,9 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
  
 module.exports = {
     entry: {
-        main: './src/index.js',
-        /*about: './src/about-page.js',
-        analytics: './src/analytics.js',*/
+        main: './src/main-page.js',
+        about: './src/about-page.js',
+        analytics: './src/analytics.js'
      },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -50,7 +50,8 @@ module.exports = {
         {
             test: /\.(gif|png|jpe?g|ico|svg|webp)$/,
             use: [
-                'file-loader?name=./images/[name].[ext]',
+                
+                'file-loader?name=./images/[name].[ext]&esModule=false',
                 {
                     loader: 'image-webpack-loader',
                     options: {},
@@ -59,7 +60,7 @@ module.exports = {
         },
         {
             test: /\.(eot|ttf|woff|woff2)$/,
-            loader: 'file-loader?name=./vendor/[name].[ext]'
+            loader: 'file-loader?name=./vendor/[name].[ext]&esModule=false'
         } 
         ]
     },
@@ -71,20 +72,20 @@ module.exports = {
         new HtmlWebpackPlugin({ // настроили плагин
             inject: true,
             template: './src/main-page.html',
-            filename: 'main-page.html',
-            chunks: ['main-page.html'],
+            filename: 'index.html',
+            chunks: ['main'],
         }),
         new HtmlWebpackPlugin({ // настроили плагин
             inject: true,
             template: './src/about-page.html',
-            filename: 'about-page.html',
-            chunks: ['about-page.html'],
+            filename: 'index.html',
+            chunks: ['about'],
         }),
         new HtmlWebpackPlugin({ // настроили плагин
             inject: true,
             template: './src/analytics.html',
-            filename: 'analytics.html',
-            chunks: ['analytics.html'],
+            filename: 'index.html',
+            chunks: ['analytics'],
         }),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
