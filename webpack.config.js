@@ -78,13 +78,13 @@ module.exports = {
         new HtmlWebpackPlugin({ // настроили плагин
             inject: true,
             template: './src/about-page.html',
-            filename: 'index.html',
+            filename: 'about-page.html',
             chunks: ['about'],
         }),
         new HtmlWebpackPlugin({ // настроили плагин
             inject: true,
             template: './src/analytics.html',
-            filename: 'index.html',
+            filename: 'analytics.html',
             chunks: ['analytics'],
         }),
         new MiniCssExtractPlugin({
