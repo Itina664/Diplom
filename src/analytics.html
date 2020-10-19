@@ -10,7 +10,7 @@
   <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="./vendor/normalize.css">
   <!--<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">-->
-  <!--<link rel="stylsheet" href="./css-pages/analytics.css">-->
+  <link rel="stylsheet" href="./css-pages/analytics.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 
@@ -68,7 +68,7 @@
           <nav class="footer__nav">
               <ul class="footer__nav-list">
                 <li class="footer__nav-item">
-                  <a href="main-page.html" class="footer__nav-link">Главная</a>
+                  <a href="./main-page.html" class="footer__nav-link">Главная</a>
                 </li>
                 <li class="footer__nav-item">
                     <a href="./about-page.html" class="footer__nav-link">О проекте</a>
@@ -80,17 +80,17 @@
           </nav>
           <div class="footer__icons">
             <a href="https://github.com" class="footer__icons-link" target="blank">
-                <img src="<%=require('./images/github.png')%>" alt="Иконка сайта Github" class="footer__icons-image">
+                <img src="./images/github.png" alt="Иконка сайта Github" class="footer__icons-image">
             </a>
             <a href="https://facebook.com" class="footer__icons-link" target="blank">
-                <img src="<%=require('./images/fb.png')%" alt="Иконка соцсети Facebook" class="footer__icons-image">
+                <img src="./images/fb.png" alt="Иконка соцсети Facebook" class="footer__icons-image">
             </a>
           </div>
         </div>
     </footer>
     </div>
 
-   <!--<script src="<%= htmlWebpackPlugin.files.js %>"></script>-->
+  <script src="analytics.js"></script>
 </body>
 
 </html>
