@@ -12,8 +12,8 @@ Manual for open project from Github:
 
 Put in terminal:
 
-git clone ,
-
+git clone <name of repository>,
+  
 npm run build,
 
 npm run dev,
