@@ -13,7 +13,7 @@ Manual for open project from Github:
 
 Put in terminal:
 
-git clone <name of repository>",
+git clone <name of repository>,
   
 npm run build,
 
