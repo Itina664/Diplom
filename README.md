@@ -11,12 +11,12 @@ Technologies: JS, CSS, HTML, WebPack, GIT.
 
 Manual for open project from Github:
 
-Put in terminal:
+   put in terminal:
 
-git clone <name of repository>,
+1. git clone <name of repository>,
   
-npm run build,
+2. npm run build,
 
-npm run dev,
+3. npm run dev,
 
-npm run deploy
+4. npm run deploy
