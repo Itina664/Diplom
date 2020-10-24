@@ -5,7 +5,7 @@
         height: 120px; 
         display: flex;
         justify-content: space-between;
-        /*align-items: center;*/
+        align-items: center;
         flex-wrap: wrap;
     }
 }
@@ -15,8 +15,8 @@
         width: calc(100% - 40px - 40px);
         height: 64px; 
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        /*justify-content: space-between;
+        align-items: center;*/
         flex-wrap: nowrap;
 
     }

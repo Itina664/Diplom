@@ -2,6 +2,7 @@
     .footer__menu-list {
         margin: 0;
         padding: 0;
+        /*margin-bottom: 12px;*/
         list-style-type: none;
         display: flex;
         justify-content: space-between;
