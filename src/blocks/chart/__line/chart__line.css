@@ -1,10 +1,12 @@
-.line {
-    display: flex;
-    align-items: center;
-    height: 30px;
-    background-color: gray;
+.chart__line {
+    height: 24px;
     width: 100%;
-    margin-bottom: 10px
+    margin: 0;
+    margin-top: 28px;
+    margin-bottom: 28px; 
+  }
+  .chart__line:nth-child(7) {
+    margin-bottom: 0;
   }
   
   

@@ -1,8 +1,0 @@
-@import url(./__container/section-title-result__container.css);
-@import url(./__name/section-title-result__name.css);
-@import url(./__image/section-title-result__image.css);
-
-
-.section-title-result {
-    background: #f5f6f7;
-}

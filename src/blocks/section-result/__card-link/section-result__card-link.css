@@ -1,0 +1,32 @@
+@media screen and (min-width: 320px) {
+    .section-result__card-link {
+        margin-bottom: 8px;
+        width: 288px;
+        text-decoration: none;
+        background: #fff;
+        border-radius: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-result__card-link {
+        margin-right: 8px;
+        width: 224px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-result__card-link {
+        margin-bottom: 16px;
+        margin-right: 16px;
+        width: 400px;
+    }
+}
+
+.section-result__card-link:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.section-result__card-link:nth-of-type(6) {
+    margin-right: 0;
+}

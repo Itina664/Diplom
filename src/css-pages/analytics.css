@@ -3,18 +3,19 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/chart/chart.css);
+@import url(../blocks/analytics-general/analytics-general.css);
+@import url(../blocks/chart/chart.css);
 
 
 
 .body {
-  margin: 0 auto;
   width: 100%;
   background-color: #fff;
-  max-width: 1440px;
 }
 
-.page-main {
-  margin: 0 auto;
+.page-about {
+width: 100%;
+margin: 0;
 }
 
   /*@media screen and (max-width: 768px) {

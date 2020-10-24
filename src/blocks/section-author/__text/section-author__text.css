@@ -1,4 +1,11 @@
-.section-author__text {
-    width: calc(100% - 464px - 56px);
-    margin-top: 51px;
+@media screen and (min-width: 768px) { 
+    .section-author__text {
+        width: calc(100% - 232px - 32px);
+    }
+}
+
+@media screen and (min-width: 1440px) { 
+    .section-author__text {
+        width: calc(100% - 464px - 56px);
+    }
 }

@@ -1,12 +1,21 @@
-.section-search__title {
-    margin: auto;
-    padding-top: 80px;
-    font-family: 'Roboto Slab', Arial, sans-serif;  
-    font-style: normal; 
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 64px;
-    text-align: left;
-    max-width: 40%;
-    color: white
+@media screen and (min-width: 320px) {
+    .section-search__title {
+        margin: 0;
+        font-size: 36px;
+        line-height: 40px;
+        font-family: 'Roboto Slab', Arial, sans-serif;  
+        font-style: normal; 
+        font-weight: normal;
+        color: white;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-search__title {
+        font-size: 60px;
+        line-height: 64px;
+
+        
+    }
 } 

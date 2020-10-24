@@ -27,20 +27,22 @@
           </ul>
         </nav>
       </div>
-      <div class="header__bg header__bg_white"></div>
-  </header>
+      <div class="header__bg"></div>
+    </header>
 
     <div class="section-clients">
-      <h1 class="section-clients__caption">Клиентам</h1>
-      <p class="section-clients__comment">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
-      <p class="section-clients__comment">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и
-      функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
-      <p class="section-clients__comment">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ.
-      Это повышает удобство использования сервиса.</p>
-      <p class="section-clients__comment">При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется,
-      а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением.
-      А значит, потенциальная аудитория возрастает.</p>
-      <p class="section-clients__comment">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+      <div class="section-clients__container">
+        <h1 class="section-clients__caption">Клиентам</h1>
+        <p class="section-clients__comment">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
+        <p class="section-clients__comment">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и
+        функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+        <p class="section-clients__comment">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ.
+        Это повышает удобство использования сервиса.</p>
+        <p class="section-clients__comment">При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется,
+        а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением.
+        А значит, потенциальная аудитория возрастает.</p>
+        <p class="section-clients__comment">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+      </div>
     </div>
 
     <div class="section-technology">
@@ -79,16 +81,14 @@
       </div>
     </div>
 
-    <div class="section-title-result">
-      <div class="section-title-result__container">
-          <p class="section-title-result__name">Результаты поиска</p>
-          <a href="#" class="section-title-result__link">
-              <img src="<%=require('./images/open-github.png')%>" alt="Кнопка 'Посмотреть результат'" class="section-title-result__image section-title-result__image_github">
-          </a>
-      </div>
-    </div>
-
     <div class="section-commit">
+    
+      <div class="section-result__title-container">
+        <p class="section-result__name">История коммитов из&nbsp;Github</p>
+        <a href="https://github.com" class="section-result__link">
+          <img src="<%=require('./images/open-github.png')%>" alt="Кнопка 'Посмотреть результат'" class="section-result__image section-result__image_github">
+        </a>
+      </div>
       <div class="section-commit__commits-container">
         <a href="#" class="section-commit__commit-link">
           <p class="section-commit__commit-date">14 августа, 2019</p>
@@ -127,35 +127,37 @@
             Plugins > Available plugins   and find and install Emmet plugin.</p>
         </a>
       </div>
-      <img src="<%=require('./images/3-points.png')%>" alt="Кнопки для пролистывания сладера" class="section-commit__points-image">
+      <div class="section-commit__points-image">
+        <img src="<%=require('./images/3-points.png')%>" alt="Кнопки для пролистывания сладера" class="section-commit__points">
+      </div>
     </div>
 
     <footer class="footer">
       <div class="footer__container">
         <p class="footer__copyright">&#169; 2019 Supersite</p>
-        <nav class="footer__nav">
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item">
-                <a href="./index.html" class="footer__nav-link">Главная</a>
-              </li>
-              <li class="footer__nav-item">
-                  <a href="./about-page.html" class="footer__nav-link">О проекте</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="https://praktikum.yandex.ru/web" class="footer__nav-link" target="blank">Яндекс.Практикум</a>
-              </li>
-            </ul>
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a href="./index.html" class="footer__menu-link">Главная</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="./about-page.html" class="footer__menu-link">О проекте</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="https://praktikum.yandex.ru/web" class="footer__menu-link" target="blank">Яндекс.Практикум</a>
+            </li>
+          </ul>
         </nav>
         <div class="footer__icons">
           <a href="https://github.com" class="footer__icons-link" target="blank">
             <img src="<%=require('./images/github.png')%>" alt="Иконка сайта Github" class="footer__icons-image">
-        </a>
-        <a href="https://facebook.com" class="footer__icons-link" target="blank">
+          </a>
+          <a href="https://facebook.com" class="footer__icons-link" target="blank">
             <img src="<%=require('./images/fb.png')%>" alt="Иконка соцсети Facebook" class="footer__icons-image">
-        </a>
+          </a>
         </div>
       </div>
-    </footer>
+  </footer>
 
   </div>
  <!--<script src="<%= htmlWebpackPlugin.files.js %>"></script>-->

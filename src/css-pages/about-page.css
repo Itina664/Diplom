@@ -5,7 +5,7 @@
 @import url(../blocks/section-author/section-author.css);
 @import url(../blocks/section-clients/section-clients.css);
 @import url(../blocks/section-technology/section-technology.css);
-@import url(../blocks/section-title-result/section-title-result.css);
+@import url(../blocks/section-result/section-result.css);
 @import url(../blocks/section-commit/section-commit.css);
 
 .body {
@@ -14,8 +14,8 @@
 }
 
 .page-about {
-  margin: 0 auto;
-  max-width: 1440px;
+  width: 100%;
+  margin: 0;
 }
 
   /*@media screen and (max-width: 768px) {

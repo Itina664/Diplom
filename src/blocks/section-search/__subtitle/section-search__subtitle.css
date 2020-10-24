@@ -1,12 +1,25 @@
-.section-search__subtitle {
-    padding-left: 416px;
-    padding-top: 32px;
-    font-family: 'Roboto', Arial, sans-serif;  
-    font-style: normal; 
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: left;
-    max-width: 35%;
-    color: white
+@media screen and (min-width: 320px) {
+    .section-search__subtitle {
+        margin: 0 auto;
+        padding-top: 16px;
+        font-family: 'Roboto', Arial, sans-serif;  
+        font-style: normal; 
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        color: white
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-search__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-search__subtitle {
+        padding-top: 32px;
+    }
 }

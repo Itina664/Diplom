@@ -1,0 +1,12 @@
+@media screen and (min-width: 320px) {
+    .footer__menu {
+        margin: 0;
+        width: 184px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__menu {
+        width: 350px;
+    }
+}

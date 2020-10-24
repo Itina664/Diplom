@@ -1,8 +1,34 @@
-.section-technology__container {
-    margin: 0;
-    width: 80%;
-    margin-left: 104px;
-    margin-top: 80px;
-    display: flex;
-    justify-content: space-between;
+@media screen and (min-width: 320px) {
+    .section-technology__container {
+        margin: 0 auto;
+        padding: 0;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-top: 32px;
+        padding-bottom: 52px;
+        width: 288px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-technology__container {
+        margin-left: 40px;
+        padding-top: 30px;
+        padding-bottom: 54px;
+        width: calc(100% - 40px - 80px);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-technology__container {
+        margin-left: 104px;
+        padding-top: 80px;
+        padding-bottom: 102px;
+        margin-right: 230px;
+        width: calc(100% - 104px - 230px);
+        flex-wrap: nowrap;
+    }
 }

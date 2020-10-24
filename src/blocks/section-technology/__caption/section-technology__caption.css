@@ -1,10 +1,25 @@
-.section-technology__caption {
-    margin: 0;
-    max-width: 40%;
-    font-family: 'Roboto Slab', Arial, sans-serif; 
-    font-style: normal;  
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 46px;
-    color: #1a1b22;
+@media screen and (min-width: 320px) {
+    .section-technology__caption {
+        margin: 0;
+        font-family: 'Roboto Slab', Arial, sans-serif; 
+        font-style: normal;  
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 34px;
+        color: #1a1b22;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-technology__caption {
+        margin-bottom: 40px;
+        max-width: 288px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-technology__caption {
+        font-size: 40px;
+        line-height: 46px;
+    }
 }

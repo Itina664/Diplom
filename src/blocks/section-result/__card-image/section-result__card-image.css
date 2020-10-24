@@ -1,0 +1,21 @@
+@media screen and (min-width: 320px) {
+    .section-result__card-image {
+    border-radius: 16px 16px 0 0;
+    width: 288px;
+    height: 196px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-result__card-image {
+    width: 224px;
+    height: 150px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-result__card-image {
+        width: 400px;
+        height: 272px;
+    }
+}

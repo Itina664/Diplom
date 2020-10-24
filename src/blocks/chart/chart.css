@@ -1,3 +1,46 @@
+@import url(__title/chart__title.css);
+@import url(__header-container/chart__header-container.css);
+@import url(__date-container/chart__date-container.css);
+@import url(__bg/chart__bg.css);
+@import url(__date/chart__date.css);
+@import url(__month/chart__month.css);
+@import url(__header-counter/chart__header-counter.css);
+@import url(__container/chart__container.css);
+@import url(__days/chart__days.css);
+@import url(__day/chart__day.css);
+@import url(__scale/chart__scale.css);
+@import url(__point/chart__point.css);
+@import url(__group/chart__group.css);
+@import url(__diagram/chart__diagram.css);
 @import url(__line/chart__line.css);
 @import url(__loader/chart__loader.css);
 @import url(__counter/chart__counter.css);
+
+@media screen and (min-width: 320px) {
+    .chart {
+        background: #f5f6f7;
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 24px;
+        padding-top: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .chart {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .chart {
+        padding-left: 104px;
+        padding-right: 104px;
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+}

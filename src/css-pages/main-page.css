@@ -2,27 +2,19 @@
 @import url(../vendor/fonts.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/header/header.css);
-@import url(../blocks/section-title-result/section-title-result.css);
+@import url(../blocks/section-result/section-result.css);
 @import url(../blocks/section-search/section-search.css);
 @import url(../blocks/section-preloader/section-preloader.css);
 @import url(../blocks/section-notfound/section-notfound.css);
-@import url(../blocks/section-cards/section-cards.css);
-
+@import url(../blocks/section-author/section-author.css);
 
 
 .body {
-  margin: 0 auto;
   width: 100%;
   background-color: #fff;
-  max-width: 1440px;
 }
 
-.page-main {
-  margin: 0 auto;
+.page-about {
+width: 100%;
+margin: 0;
 }
-
-  /*@media screen and (max-width: 768px) {
-    .user-info {
-      flex-direction: column;
-      align-items: center;
-    }*/

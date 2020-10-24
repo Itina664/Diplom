@@ -1,0 +1,8 @@
+.chart__diagram {
+    margin: 0;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 80px);
+    background-color: #f5f6f7;
+}
