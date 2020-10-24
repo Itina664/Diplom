@@ -2,7 +2,8 @@
     .section-result__button {
         margin: 0 auto;
         padding: 0;
-        margin-left: 16px;
+        margin-left: calc((100% - 288px) / 2);
+        margin-right: calc((100% - 288px) / 2);
         margin-bottom: 44px;
         width: 288px;
         height: 56px;
@@ -20,18 +21,19 @@
 
 @media screen and (min-width: 768px) {
     .section-result__button {
-        margin-left: 272px;
+        margin: 0 auto;
+        margin-left: calc((100% - 288px) / 2);
+        margin-right: calc((100% - 288px) / 2);
         margin-bottom: 40px;
-        width: 240px;
-        height: 56px;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .section-result__button {
-        margin-left: 576px;
+        margin: 0 auto;
+        margin-left: calc((100% - 288px) / 2);
+        margin-right: calc((100% - 288px) / 2);
         margin-bottom: 80px;
-        width: 288px;
         height: 64px;
     }
 }
