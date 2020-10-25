@@ -1,0 +1,10 @@
+@import url(./circle-preloader.css);
+@import url(./__text/section-preloader__text.css);
+
+.section-preloader {
+    width: 100%;
+    background: #f5f6f7;
+    height: 202px;
+    padding-top: 80px;
+    display: none;
+}

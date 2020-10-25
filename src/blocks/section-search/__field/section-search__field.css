@@ -1,0 +1,36 @@
+@media screen and (min-width: 320px) {
+    .section-search__field {
+        height: 128px;
+        margin-top: 64px;
+        padding-bottom: 32px;
+        border: none;
+        background: none;
+        display: flex; 
+        justify-content: space-between;
+        border: none;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-search__field {
+        margin: 0;
+        margin-top: 24px;
+        padding-bottom: 0;
+        height: 56px;
+        background: #fff;
+        border: 1px solid #d1d2d6;
+        box-sizing: border-box;
+        border-radius: 100px;
+        flex-direction: row;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-search__field {
+        margin-top: 64px;
+        height: 64px;  
+    }
+}
+

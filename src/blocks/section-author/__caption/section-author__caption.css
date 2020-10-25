@@ -1,0 +1,19 @@
+@media screen and (min-width: 320px) { 
+    .section-author__caption {
+        width: 100%;
+        margin:0;
+        font-family: 'Roboto Slab', Arial, sans-serif; 
+        font-style: normal;  
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+        color: #1a1b22;
+    }
+}
+
+@media screen and (min-width: 1440px) { 
+    .section-author__caption {
+        font-size: 40px;
+        line-height: 46px;
+    }
+}

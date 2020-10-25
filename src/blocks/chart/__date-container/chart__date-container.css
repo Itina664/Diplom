@@ -1,0 +1,7 @@
+.chart__date-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70px;
+    margin-bottom: 20px;
+}

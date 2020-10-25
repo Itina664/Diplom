@@ -1,0 +1,11 @@
+@import url(./__name/header__name.css);
+@import url(./__list/header__list.css);
+@import url(./__menu/header__menu.css);
+@import url(./__item-link/header__item-link.css);
+@import url(./__bg/header__bg.css);
+@import url(./__container/header__container.css);
+
+
+.header {
+    width: 100%;
+}

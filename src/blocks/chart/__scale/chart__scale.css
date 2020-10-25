@@ -1,0 +1,22 @@
+@media screen and (min-width: 320px) {
+    .chart__scale {
+        margin: 0;
+        margin-top: 16px;
+        margin-left: 104px;
+        width: calc(100% - 104px);
+        display: flex;
+        justify-content: space-between;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .chart__scale {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.chart__scale_down {
+    margin-top: 0
+}

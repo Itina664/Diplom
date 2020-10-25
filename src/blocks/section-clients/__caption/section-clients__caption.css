@@ -1,0 +1,25 @@
+@media screen and (min-width: 320px) {
+    .section-clients__caption {
+        margin: 0;
+        width: 30%;
+        font-family: 'Roboto Slab', Arial, sans-serif; 
+        font-style: normal;  
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+        color: #1a1b22;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-clients__caption {
+        line-height: 34px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-clients__caption {
+        font-size: 40px;
+        line-height: 46px;
+    }
+}

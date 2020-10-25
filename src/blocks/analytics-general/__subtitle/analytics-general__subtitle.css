@@ -1,0 +1,17 @@
+.analytics-general__subtitle {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #1a1b22;
+}
+.analytics-general__subtitle_upper {
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+.analytics-general__subtitle_digit {
+    font-weight: 500;
+}

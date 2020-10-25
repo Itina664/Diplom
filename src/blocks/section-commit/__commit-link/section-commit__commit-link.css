@@ -1,0 +1,58 @@
+@media screen and (min-width: 320px) {
+  .section-commit__commit-link {
+    margin: 0 auto;
+    width: 288px;
+    height: 264px;
+    background: fff;
+    border-radius: 16px;
+    background: #fff;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .section-commit__commit-link:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .section-commit__commit-link:nth-of-type(3) {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .section-commit__commit-link {
+    margin-right: 8px;
+    width: 336px;
+    height: 242px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-commit__commit-link:nth-of-type(2) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-commit__commit-link {
+    margin-right: 20px;
+    width: 400px;
+    height: 288px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-commit__commit-link:nth-of-type(3) {
+    display: block;
+  }
+}
+
+
+
+/*.section-cards__card-link:nth-of-type(3) {
+  margin-right: 80px;
+}*/

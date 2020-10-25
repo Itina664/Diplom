@@ -1,0 +1,12 @@
+.section-preloader__text {
+    margin: 0;
+    padding-top: 24px;
+    font-family: 'Roboto', Arial, sans-serif; 
+    font-style: normal;  
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #b6bcbf;
+    text-align: center;
+    
+}

@@ -1,0 +1,11 @@
+@media screen and (min-width: 320px) {
+    .header__menu {
+        width: calc(61px + 11px + 76px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header__menu {
+        width: calc(69px + 34px + 86px);
+    }
+}
