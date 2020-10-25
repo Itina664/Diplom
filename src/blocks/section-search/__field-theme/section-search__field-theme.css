@@ -1,10 +1,10 @@
 @media screen and (min-width: 320px) {
     .section-search__field-theme {
-        margin: 0 auto;
+        margin: 0;
+        padding: 0;
         padding-left: 16px;
         height: 56px;
         width: 288px;
-        margin-bottom: 16px;
         background: #fff;
         border: 1px solid #d1d2d6;
         box-sizing: border-box;
@@ -15,14 +15,19 @@
         font-size: 16px;
         line-height: 22px;
         color: #b6bcbf;
+        border: none;
     }
 }
 
 @media screen and (min-width: 768px) {
     .section-search__field-theme {
-        padding: 0;
-        margin-left: 25px;
-        border: none;
+        padding-left: 25px; 
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-search__field-theme {
+        height: 64px; 
     }
 }
 

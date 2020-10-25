@@ -1,7 +1,7 @@
 @media screen and (min-width: 320px) {
     .section-result__card-link {
         margin-bottom: 8px;
-        width: 288px;
+        width: 100%;
         text-decoration: none;
         background: #fff;
         border-radius: 16px;
@@ -11,7 +11,7 @@
 @media screen and (min-width: 768px) {
     .section-result__card-link {
         margin-right: 8px;
-        width: 224px;
+        width: calc((100% - (8px * 2)) / 3);
     }
 }
 
@@ -19,7 +19,7 @@
     .section-result__card-link {
         margin-bottom: 16px;
         margin-right: 16px;
-        width: 400px;
+        width: calc((100% - (16px * 2)) / 3);
     }
 }
 
