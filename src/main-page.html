@@ -37,12 +37,16 @@
       <div class="section-search__container">
         <p class="section-search__title">Что&nbsp;в&nbsp;мире творится</p>
         <p class="section-search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю</p>
-        <div class="section-search__field">
-          <input type="text" name="theme" class="section-search__field-theme" placeholder="Природа" required>
+        <form class="section-search__form" name="search" novalidate>
+          <div class="section-search__field">
+            <input type="text" name="theme" class="section-search__field-theme" placeholder="Природа" required minlength="2" maxlength="30">
+            <span class="section-search__error-theme"></span>
+          </div>
           <button type="submit" class="section-search__button">Искать</button>
-        </div>
+        </form>
       </div>      
     </div>
+
     <div class="section-preloader">
       <i class="circle-preloader"></i>
       <p class="section-preloader__text">Идет поиск новостей</p>
@@ -64,7 +68,7 @@
         </a>
       </div>
       <div class="section-result__cards-container">
-        <a href="#" class="section-result__card-link">
+        <!--<a href="#" class="section-result__card-link">
           <img src="<%=require('./images/parks.png')%>" alt="Изображение растения на фотоснимке" class="section-result__card-image">
           <p class="section-result__card-date">2 августа, 2019</p>
           <p class="section-result__card-title">Национальное достояние -&nbsp;парки</p>
@@ -112,7 +116,7 @@
           система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
           <p class="section-result__card-infoagency">лента.ру</p>
         </a>
-      </div>
+      </div>-->
       <button type="submit" class="section-result__button">Показать еще</button>
     </div>
 

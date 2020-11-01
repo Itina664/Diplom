@@ -13,9 +13,9 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
  
 module.exports = {
     entry: {
-        main: './src/main-page.js',
-        about: './src/about-page.js',
-        analytics: './src/analytics.js'
+        main: './src/index.js',
+        about: './src/about/index.js',
+        analytics: './src/analytics/index.js'
      },
     output: {
         path: path.resolve(__dirname, 'dist'),

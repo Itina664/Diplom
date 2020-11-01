@@ -28,3 +28,7 @@
         width: calc(100% - 104px - 104px);
     }
 }
+
+.section-result__cards-container_hidden {
+    overflow: hidden;
+}

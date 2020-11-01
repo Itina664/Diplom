@@ -8,3 +8,7 @@
     padding-top: 80px;
     display: none;
 }
+
+.section-preloader_visible {
+    display: block;
+}
