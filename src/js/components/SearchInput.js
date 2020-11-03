@@ -1,10 +1,10 @@
-class SearchInput {
+export default class SearchInput {
     constructor(form) {
       this.form = form;
     };
   
     //валидация поля input
-    checkInputValidity(input, errorTheme) {
+    checkInputValidity = (input, errorTheme) => {
       if (input.validity.valueMissing) { //если поле пустое
         errorTheme.textContent = "Нужно ввести ключевое слово";
         errorTheme.classList.add('error_active');

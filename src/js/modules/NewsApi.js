@@ -1,13 +1,14 @@
-class NewsApi {
-    constructor(userInput, dateString, apiKey, headers) {
-      this.userInput = userInput;
-      this.dateString = dateString;
+export default class NewsApi {
+    constructor(baseUrl, lastday, today, apiKey, headers) {
+      this.baseUrl = baseUrl;
+      this.lastday = lastday;
+      this.today = today;
       this.apiKey = apiKey;
       this.headers = headers;
     }
 
-    getNewsCards() {
-        return fetch(`http://newsapi.org/v2/everything?q=${userInput}&from=${dateString}&apiKey=${apiKey}`, {
+    getNewsCards(request) {
+        return fetch(`${this.baseUrl}q=${request}&from=${this.lastday}&to=${this.today}&apiKey=${this.apiKey}`, {
             method: 'GET',
             headers: this.headers
             })

@@ -1,4 +1,4 @@
-class NewsCard {
+export default class NewsCard {
     constructor(newsCard) {
         this.newsCard = newsCard;
     }
