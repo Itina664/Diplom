@@ -54,9 +54,8 @@ import "./css-pages/analytics.css";
                 storageData = JSON.stringify(data); //превращаем данные в строку
                 getFromStorageData = JSON.parse(storageData); //в объект
                 let dataObj = Array.from(getfromStorage);
-
-
-                newsCardList.addCard(data);
+                newsApi.create(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency);
+                newsCardList.addCard(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency);
             })
                 .catch((err) => {
                     console.log(err);  
@@ -70,7 +69,7 @@ import "./css-pages/analytics.css";
      
     //создаем параметры запроса
     const baseUrl = 'http://newsapi.org/v2/everything?';
-    const lastday = date.setDate(today + 2);;
+    const lastday = date.setDate(today - 7);;
     const today = new Date();
     const apiKey = 'bb30c4aebb704160a1beca231e4eae3a';
     const newsApi = new NewsApi(baseUrl, searchInput, lastday, today, apiKey, 
