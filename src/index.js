@@ -51,6 +51,11 @@ import "./css-pages/analytics.css";
                 const localStorageAdapter = new LocalStorageAdapter(data);
                 localStorageAdapter.setItem(data);
                 localStorageAdapter.getItem(data);
+                storageData = JSON.stringify(data); //превращаем данные в строку
+                getFromStorageData = JSON.parse(storageData); //в объект
+                let dataObj = Array.from(getfromStorage);
+
+
                 newsCardList.addCard(data);
             })
                 .catch((err) => {
