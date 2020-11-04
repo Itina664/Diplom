@@ -1,14 +1,16 @@
 export default class NewsApi {
-    constructor(baseUrl, lastday, today, apiKey, headers) {
+    constructor(baseUrl, request, lastday, today, apiKey, headers) {
       this.baseUrl = baseUrl;
+      this.request = request;
       this.lastday = lastday;
       this.today = today;
       this.apiKey = apiKey;
       this.headers = headers;
+      
     }
 
     getNewsCards(request) {
-        return fetch(`${this.baseUrl}q=${request}&from=${this.lastday}&to=${this.today}&apiKey=${this.apiKey}`, {
+        return fetch(`${this.baseUrl}q=${this.request}&from=${this.lastday}&to=${this.today}&apiKey=${this.apiKey}`, {
             method: 'GET',
             headers: this.headers
             })

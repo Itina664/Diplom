@@ -38,10 +38,12 @@
         <p class="section-search__title">Что&nbsp;в&nbsp;мире творится</p>
         <p class="section-search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю</p>
         <form class="section-search__form" name="search" novalidate>
-          <div class="section-search__field">
-            <input type="text" name="theme" class="section-search__field-theme" placeholder="Природа" required minlength="2" maxlength="30">
-            <span class="section-search__error-theme"></span>
-            <button type="submit" class="section-search__button">Искать</button>
+          <div class="section-search__field-container">
+            <p class="section-search__error-theme section-search__error-theme_active"></p>
+            <div class="section-search__field">
+              <input type="text" name="theme" class="section-search__field-theme" placeholder="Введите ключевое слово" required minlength="2" maxlength="30">
+              <button type="submit" class="section-search__button">Искать</button>
+            </div>
           </div>
         </form>
       </div>      

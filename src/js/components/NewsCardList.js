@@ -5,9 +5,9 @@ export default class NewsCardList {
       this.card = card;
     };
   
-    addCard = (date, text, title, infoagency) => {
+    addCard (date, text, title, infoagency, link)  {
       this.container.
-      appendChild(this.card().create(date, text, title, infoagency));
+      appendChild(this.card().create(date, text, title, infoagency, link));
     };
 
     reset(date, text, title, infoagency) {

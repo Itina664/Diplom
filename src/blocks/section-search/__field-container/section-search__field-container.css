@@ -1,0 +1,19 @@
+@media screen and (min-width: 320px) {
+    .section-search__field-container {
+        margin: 0;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        border: none;
+        background: none;
+        display: flex; 
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-search__field-container {
+        padding-top: 32px;
+        padding-bottom: 0;
+    }
+}
