@@ -1,7 +1,7 @@
 export default class SearchInput {
-    /*constructor(form) {
+    constructor(form) {
       this.form = form;
-    };*/
+    };
   
     //валидация поля input
     checkInputValidity (input, errorTheme) {
@@ -20,11 +20,11 @@ export default class SearchInput {
     }
 
     //установление кнопки submit активной/неактивной в зависимоти от проверки на валидность
-    setSubmitButtonState (input, buttonSubmit) {
+    /*setSubmitButtonState (input, buttonSubmit) {
       if (input.checkValidity()) {
         buttonSubmit.removeAttribute('disabled');
       } else {
         buttonSubmit.setAttribute('disabled', true);
       }
-    }
+    }*/
 }

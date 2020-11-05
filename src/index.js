@@ -11,26 +11,28 @@ import "./css-pages/analytics.css";
 
 (function () {
     const cardsContainer = document.querySelector('.section-result__cards-container');
-    const buttonSubmitSearch = document.querySelector('.section-search__button');
     const errorTheme = document.querySelector('.section-search__error-theme');
-    const requestInput = document.querySelector('.section-search__field-theme');
+    const formSearch = document.forms.search;
+    const requestInput = formSearch.elements.request;
     const preloader = document.querySelector('.section-preloader');
 
     const newsCard = () => new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
-    const searchInput = new SearchInput();//активизируем работу с инпутом
+    const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
     searchInput.reset(errorTheme);
 
-    function submitSearchForm() {
+    function functionSearch() {
+        console.log('ку-ку');
         searchInput.checkInputValidity(requestInput, errorTheme);//валидация формы
-        console.log(`валидация reguestInput ${requestInput.value}`);
-        searchInput.setSubmitButtonState(requestInput, buttonSubmitSearch);
+        console.log(`reguestInput при валидации= ${requestInput.value}`);
+        /*searchInput.setSubmitButtonState(requestInput, buttonSubmitSearch);*/
         preloader.classList.add('section-preloader_visible');
         cardsContainer.classList.add('cards-container_hidden');
         console.log(`preloader= ${preloader}`);
         newsCardList.reset();
-        newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
+        newsApi.getNewsCards(requestInput)//вызываем запрос новостей
             .then((data) => {
+                console.log(`request при отправке запроса= ${requestInput}`);
                 const localStorageAdapter = new LocalStorageAdapter(data);
                 localStorageAdapter.setItemLocalStorage(key, data);
                 localStorageAdapter.getItemLocalStorage(data);
@@ -57,8 +59,17 @@ import "./css-pages/analytics.css";
             'Content-Type': 'application/json'
         });
 
+    console.log(`requestInput перед сабмитом кнопки Искать= ${requestInput.value}`);
+    
+    
+
     //активизируем поиск новостей по кнопке сабмит на форме
-    buttonSubmitSearch.addEventListener('submit', submitSearchForm);
+    formSearch.addEventListener('submit', test);
+    function test() {
+            console.log('проверка колбэка');
+        };
+
+    
     
     
 
