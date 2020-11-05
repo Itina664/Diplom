@@ -6,7 +6,6 @@ export default class NewsApi {
       this.today = today;
       this.apiKey = apiKey;
       this.headers = headers;
-      
     }
 
     getNewsCards(request) {
@@ -23,7 +22,10 @@ export default class NewsApi {
         if (!res.ok) {
             return Promise.reject(`Ошибка: ${res.status}`); 
         }
+        
         return res.json();
+        
     }
 
 }
+

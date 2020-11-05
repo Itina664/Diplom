@@ -18,7 +18,7 @@ export default class SearchInput {
     reset(errorTheme) {
       errorTheme.textContent = '';
     }
-    
+
     //установление кнопки submit активной/неактивной в зависимоти от проверки на валидность
     setSubmitButtonState (input, buttonSubmit) {
       if (input.checkValidity()) {

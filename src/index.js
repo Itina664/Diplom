@@ -3,7 +3,6 @@ import LocalStorageAdapter from './js/modules/LocalStorageAdapter.js';
 import NewsCard from './js/components/NewsCard.js';
 import NewsCardList from './js/components/NewsCardList.js';
 import SearchInput from './js/components/SearchInput.js';
-import Preloader from './js/utils/Preloader.js';
 
 import "./css-pages/about-page.css";
 import "./css-pages/main-page.css";
@@ -12,34 +11,25 @@ import "./css-pages/analytics.css";
 
 (function () {
     const cardsContainer = document.querySelector('.section-result__cards-container');
-    const buttonSubmitSearchTheme = document.querySelector('.section-search__button');
+    const buttonSubmitSearch = document.querySelector('.section-search__button');
     const errorTheme = document.querySelector('.section-search__error-theme');
     const requestInput = document.querySelector('.section-search__field-theme');
-    
-    //создание карточки с новостью
-    const newsCard = new NewsCard();
+    const preloader = document.querySelector('.section-preloader');
 
-    //создание контейнера с карточками новостей
-    const newsCardList = new NewsCardList(cardsContainer, newsCard);
-
-    //активизируем класс Preloader
-    const preloader = new Preloader();
-
-    //активизируем работу с инпутом
-    const searchInput = new SearchInput();
+    const newsCard = () => new NewsCard();//создание карточки с новостью
+    const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
+    const searchInput = new SearchInput();//активизируем работу с инпутом
     searchInput.reset(errorTheme);
 
     function submitSearchForm() {
-
-        //валидация формы
-        searchInput.checkInputValidity(requestInput, errorTheme);
-        searchInput.setSubmitButtonState(requestInput, buttonSubmitSearchTheme);
-
-        preloader.renderLoading(true);
+        searchInput.checkInputValidity(requestInput, errorTheme);//валидация формы
+        console.log(`валидация reguestInput ${requestInput.value}`);
+        searchInput.setSubmitButtonState(requestInput, buttonSubmitSearch);
+        preloader.classList.add('section-preloader_visible');
+        cardsContainer.classList.add('cards-container_hidden');
+        console.log(`preloader= ${preloader}`);
         newsCardList.reset();
-        
-        //вызываем запрос новостей
-        newsApi.getNewsCards()
+        newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
                 const localStorageAdapter = new LocalStorageAdapter(data);
                 localStorageAdapter.setItemLocalStorage(key, data);
@@ -54,7 +44,7 @@ import "./css-pages/analytics.css";
                     console.log(`ошибка запроса ${err}`);  
                 })
                 
-                .finally(preloader.renderLoading(false));
+                .finally(preloader.classList.remove('section-preloader_visible'));
     };
 
     //создаем параметры запроса
@@ -68,7 +58,7 @@ import "./css-pages/analytics.css";
         });
 
     //активизируем поиск новостей по кнопке сабмит на форме
-    buttonSubmitSearchTheme.addEventListener('submit', submitSearchForm);
+    buttonSubmitSearch.addEventListener('submit', submitSearchForm);
     
     
 
