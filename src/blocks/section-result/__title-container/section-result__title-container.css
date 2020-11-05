@@ -29,3 +29,7 @@
         max-width: calc(100% - 104px - 104px);
     }
 }
+
+.section-result__title-container_unvisible {
+    display: none;
+}

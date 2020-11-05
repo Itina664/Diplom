@@ -42,3 +42,7 @@
     opacity: .9;
     cursor: pointer;
 }
+
+.section-result__button_unvisible {
+    display: none;
+}

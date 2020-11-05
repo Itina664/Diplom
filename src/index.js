@@ -10,43 +10,44 @@ import "./css-pages/analytics.css";
 
 
 (function () {
-    const cardsContainer = document.querySelector('.section-result__cards-container');
+    const cardsContainer = document.querySelector('.section-result__cards-container_hidden');
     const errorTheme = document.querySelector('.section-search__error-theme');
     const formSearch = document.forms.search;
     const requestInput = formSearch.elements.request;
     const preloader = document.querySelector('.section-preloader');
-
+    const buttonSubmit = document.querySelector('.section-search__button');
+    const titleResult = document.querySelector('.section-result__title-container_unvisible');
+    const showMore = document.querySelector('.section-result__button_unvisible');
+    
     const newsCard = () => new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
-    searchInput.reset(errorTheme);
 
-    function functionSearch() {
-        console.log('ку-ку');
-        searchInput.checkInputValidity(requestInput, errorTheme);//валидация формы
-        console.log(`reguestInput при валидации= ${requestInput.value}`);
-        /*searchInput.setSubmitButtonState(requestInput, buttonSubmitSearch);*/
-        preloader.classList.add('section-preloader_visible');
-        cardsContainer.classList.add('cards-container_hidden');
-        console.log(`preloader= ${preloader}`);
-        newsCardList.reset();
-        newsApi.getNewsCards(requestInput)//вызываем запрос новостей
+    function functionSearch(event) {
+        event.preventDefault(event);
+        searchInput.setEventListeners();
+        
+        newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
-                console.log(`request при отправке запроса= ${requestInput}`);
+                console.log(`request в getNewsCards= ${requestInput.value}`);
+                preloader.classList.add('section-preloader_visible');
                 const localStorageAdapter = new LocalStorageAdapter(data);
-                localStorageAdapter.setItemLocalStorage(key, data);
-                localStorageAdapter.getItemLocalStorage(data);
-                storageData = JSON.stringify(data); //превращаем данные в строку
-                getFromStorageData = JSON.parse(storageData); //в объект
-                let dataObj = Array.from(getfromStorage);
+                localStorageAdapter.setItemLocalStorage(1, data);
+                localStorageAdapter.getItemLocalStorage(1);
+                const storageData = JSON.stringify(data); //превращаем данные в строку
+                const getFromStorageData = JSON.parse(storageData); //в объект
+                const dataObj = Array.from(getFromStorageData);
+                cardsContainer.classList.remove('cards-container_hidden');
                 newsApi.create(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
                 newsCardList.addCard(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
+                titleResult.removeAttribute('disabled');
+                showMore.removeAttribute('disabled');
             })
                 .catch((err) => {
                     console.log(`ошибка запроса ${err}`);  
                 })
                 
-                .finally(preloader.classList.remove('section-preloader_visible'));
+                .finally(preloader.removeAttribute('visible'));
     };
 
     //создаем параметры запроса
@@ -58,19 +59,8 @@ import "./css-pages/analytics.css";
         {
             'Content-Type': 'application/json'
         });
-
-    console.log(`requestInput перед сабмитом кнопки Искать= ${requestInput.value}`);
     
-    
-
     //активизируем поиск новостей по кнопке сабмит на форме
-    formSearch.addEventListener('submit', test);
-    function test() {
-            console.log('проверка колбэка');
-        };
-
-    
-    
-    
+    formSearch.addEventListener('submit', functionSearch);
 
 }())

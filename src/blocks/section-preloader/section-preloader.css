@@ -1,12 +1,34 @@
 @import url(./circle-preloader.css);
 @import url(./__text/section-preloader__text.css);
 
-.section-preloader {
-    width: 100%;
-    background: #f5f6f7;
-    height: 202px;
-    padding-top: 80px;
-    display: none;
+@media screen and (min-width: 320px) {
+    .section-preloader {
+        width: 100%;
+        background: #f5f6f7;
+        height: 140px;
+        padding-top: 50px;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-preloader {
+        width: 100%;
+        background: #f5f6f7;
+        height: 180px;
+        padding-top: 60px;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-preloader {
+        width: 100%;
+        background: #f5f6f7;
+        height: 202px;
+        padding-top: 80px;
+        display: none;
+    }
 }
 
 .section-preloader_visible {

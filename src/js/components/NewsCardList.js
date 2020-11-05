@@ -11,9 +11,9 @@ export default class NewsCardList {
     };
 
     reset(date, text, title, infoagency) {
-      date.value = '';
-      text.value = '';
-      title.value = '';
-      infoagency.value = '';
+      date.textContent = '';
+      text.textContent = '';
+      title.textContent = '';
+      infoagency.textContent = '';
     };
   }
