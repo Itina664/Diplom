@@ -1,5 +1,5 @@
 export default class NewsApi {
-    constructor(baseUrl, request, lastday, today, apiKey, headers) {
+    constructor(baseUrl, request, lastday, today, apiKey) {
       this.baseUrl = baseUrl;
       this.request = request;
       this.lastday = lastday;
@@ -9,7 +9,7 @@ export default class NewsApi {
     }
 
     getNewsCards(request) {
-        return fetch(`${this.baseUrl}q=${this.request}&from=${this.lastday}&to=${this.today}&apiKey=${this.apiKey}`, {
+        return fetch(`${this.baseUrl}q=${request}&from=${this.lastday}&to=${this.today}&apiKey=${this.apiKey}`, {
             method: 'GET',
             /*headers: this.headers*/
             })
@@ -23,7 +23,7 @@ export default class NewsApi {
             return Promise.reject(`Ошибка: ${res.status}`); 
         }
         
-        return res.json();
+        return res.clone().json();
         
     }
 

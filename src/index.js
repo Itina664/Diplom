@@ -10,16 +10,16 @@ import "./css-pages/analytics.css";
 
 
 (function () {
-    const cardsContainer = document.querySelector('.section-result__cards-container_hidden');
+    const cardsContainer = document.querySelector('.section-result__cards-container');
     const errorTheme = document.querySelector('.section-search__error-theme');
     const formSearch = document.forms.search;
     const requestInput = formSearch.elements.request;
     const preloader = document.querySelector('.section-preloader');
     const buttonSubmit = document.querySelector('.section-search__button');
-    const titleResult = document.querySelector('.section-result__title-container_unvisible');
-    const showMore = document.querySelector('.section-result__button_unvisible');
+    const titleResult = document.querySelector('.section-result__title-container');
+    const showMore = document.querySelector('.section-result__button');
     
-    const newsCard = () => new NewsCard();//создание карточки с новостью
+    const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
 
@@ -29,25 +29,33 @@ import "./css-pages/analytics.css";
         
         newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
-                console.log(`request в getNewsCards= ${requestInput.value}`);
+                console.log(`data= ${data}`);
+                /*cardsContainer.setAttribute('disabled');
+                titleResult.setAttribute('disabled');
+                showMore.setAttribute('disabled');*/
                 preloader.classList.add('section-preloader_visible');
+
                 const localStorageAdapter = new LocalStorageAdapter(data);
+                /*const storageData = JSON.stringify(data); *///превращаем данные в строку
                 localStorageAdapter.setItemLocalStorage(1, data);
                 localStorageAdapter.getItemLocalStorage(1);
-                const storageData = JSON.stringify(data); //превращаем данные в строку
-                const getFromStorageData = JSON.parse(storageData); //в объект
-                const dataObj = Array.from(getFromStorageData);
-                cardsContainer.classList.remove('cards-container_hidden');
-                newsApi.create(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
-                newsCardList.addCard(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
+                /*const getFromStorageData = JSON.parse(storageData); //в объект
+                const dataObj = Array.from(getFromStorageData);*/
+                const dataObj = data.articles[0];
+
+                /*cardsContainer.removeAttribute('disabled');
                 titleResult.removeAttribute('disabled');
-                showMore.removeAttribute('disabled');
+                showMore.removeAttribute('disabled');*/
+                newsCard.create(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
+                console.log(newsCard);
+                newsCardList.addCard(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
+                preloader.setAttribute('disabled');
             })
-                .catch((err) => {
-                    console.log(`ошибка запроса ${err}`);  
-                })
+            .catch((err) => {
+                console.log(`ошибка запроса ${err}`);  
+            });
                 
-                .finally(preloader.removeAttribute('visible'));
+            /*.finally());*/
     };
 
     //создаем параметры запроса
