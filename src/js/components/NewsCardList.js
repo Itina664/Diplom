@@ -11,18 +11,18 @@ export default class NewsCardList {
     };
 
     reset(date, text, title, infoagency) {
+      console.log(`date= ${date}`);
+      console.log(`text= ${text}`);
       date.textContent = '';
       text.textContent = '';
       title.textContent = '';
       infoagency.textContent = '';
+
     };
 
     render(result) {
-      console.log(`result1= ${result}`);
       result.forEach( (item) => {
-        console.log(`result2= ${result}`);
-        this.addCard(item.date, item.text, item.title, item.infoagency, item.link);
+        this.addCard(item.publishedAt, item.description, item.title, item.source.name, item.urlToImage);
       });
     }
-
   }

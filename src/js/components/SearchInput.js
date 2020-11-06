@@ -14,8 +14,9 @@ export default class SearchInput {
       }
     }
     
-    //очищение поля текста ошибки
-    reset(errorTheme) {
+    //очищение полей
+    reset(input, errorTheme) {
+      input.value = '';
       errorTheme.textContent = '';
     }
 
@@ -28,7 +29,7 @@ export default class SearchInput {
       }
     }
 
-    //добавление обработчиков валидации всем полям форм 
+    //группирование обработчиков под одну крышу
   setEventListeners() {
     this.form.addEventListener('input', (event) => {
       this.checkInputValidity(event.target, errorTheme);

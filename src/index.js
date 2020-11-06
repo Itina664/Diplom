@@ -18,10 +18,22 @@ import "./css-pages/analytics.css";
     const buttonSubmit = document.querySelector('.section-search__button');
     const titleResult = document.querySelector('.section-result__title-container');
     const showMore = document.querySelector('.section-result__button');
+    const dateCard = document.querySelector('.section-result__card-date');
+    const titleCard = document.querySelector('.section-result__card-title');
+    const textCard = document.querySelector('.section-result__card-text');
+    const authorCard = document.querySelector('.section-result__card-infoagency');
     
     const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
+    
+    /*function resetCardList(requestInput) {
+        if (!(requestInput.value = '')) {
+            newsCardList.reset(dateCard, titleCard, textCard, authorCard);
+        } else {
+            return;
+        }
+    };*/
 
     function functionSearch(event) {
         event.preventDefault(event);
@@ -29,6 +41,7 @@ import "./css-pages/analytics.css";
         
         newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
+                
                 cardsContainer.classList.add('section-result__cards-container_hidden');
                 titleResult.classList.add('section-result__title-container_hidden');
                 showMore.classList.add('section-result__button_hidden');
@@ -40,13 +53,11 @@ import "./css-pages/analytics.css";
                 localStorageAdapter.getItemLocalStorage(1);
                 /*const getFromStorageData = JSON.parse(storageData); //в объект*/
                 const dataObj = data;
-                /*const dataObj = data.articles[0];*/
-                /*console.log(dataObj);*/
 
+                /*resetCardList(requestInput);*/
                 newsCard.create(dataObj.publishedAt, dataObj.title, dataObj.description, dataObj.author, dataObj.urlToImage);
-                /*console.log(newsCard);*/
-                newsCardList.render(dataObj);   
-                
+                newsCardList.render(dataObj.articles);   
+
                 cardsContainer.classList.remove('section-result__cards-container_hidden');
                 titleResult.classList.remove('section-result__title-container_hidden');
                 /*showMore.classList.add('section-result__button_hidden');*/
