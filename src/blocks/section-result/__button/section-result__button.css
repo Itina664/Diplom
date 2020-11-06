@@ -43,6 +43,6 @@
     cursor: pointer;
 }
 
-.section-result__button_unvisible {
+.section-result__button_hidden {
     display: none;
 }

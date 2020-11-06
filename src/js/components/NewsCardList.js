@@ -7,7 +7,7 @@ export default class NewsCardList {
   
     addCard (date, text, title, infoagency, link)  {
       this.container.
-      appendChild(this.card().create(date, text, title, infoagency, link));
+      appendChild(this.card.create(date, text, title, infoagency, link));
     };
 
     reset(date, text, title, infoagency) {
@@ -16,4 +16,13 @@ export default class NewsCardList {
       title.textContent = '';
       infoagency.textContent = '';
     };
+
+    render(result) {
+      console.log(`result1= ${result}`);
+      result.forEach( (item) => {
+        console.log(`result2= ${result}`);
+        this.addCard(item.date, item.text, item.title, item.infoagency, item.link);
+      });
+    }
+
   }

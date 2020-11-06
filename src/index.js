@@ -29,33 +29,34 @@ import "./css-pages/analytics.css";
         
         newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
-                console.log(`data= ${data}`);
-                /*cardsContainer.setAttribute('disabled');
-                titleResult.setAttribute('disabled');
-                showMore.setAttribute('disabled');*/
+                cardsContainer.classList.add('section-result__cards-container_hidden');
+                titleResult.classList.add('section-result__title-container_hidden');
+                showMore.classList.add('section-result__button_hidden');
                 preloader.classList.add('section-preloader_visible');
 
                 const localStorageAdapter = new LocalStorageAdapter(data);
                 /*const storageData = JSON.stringify(data); *///превращаем данные в строку
                 localStorageAdapter.setItemLocalStorage(1, data);
                 localStorageAdapter.getItemLocalStorage(1);
-                /*const getFromStorageData = JSON.parse(storageData); //в объект
-                const dataObj = Array.from(getFromStorageData);*/
-                const dataObj = data.articles[0];
+                /*const getFromStorageData = JSON.parse(storageData); //в объект*/
+                const dataObj = data;
+                /*const dataObj = data.articles[0];*/
+                /*console.log(dataObj);*/
 
-                /*cardsContainer.removeAttribute('disabled');
-                titleResult.removeAttribute('disabled');
-                showMore.removeAttribute('disabled');*/
-                newsCard.create(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
-                console.log(newsCard);
-                newsCardList.addCard(dataObj.date, dataObj.title, dataObj.text, dataObj.infoagency, dataObj.link);
-                preloader.setAttribute('disabled');
+                newsCard.create(dataObj.publishedAt, dataObj.title, dataObj.description, dataObj.author, dataObj.urlToImage);
+                /*console.log(newsCard);*/
+                newsCardList.render(dataObj);   
+                
+                cardsContainer.classList.remove('section-result__cards-container_hidden');
+                titleResult.classList.remove('section-result__title-container_hidden');
+                /*showMore.classList.add('section-result__button_hidden');*/
             })
             .catch((err) => {
                 console.log(`ошибка запроса ${err}`);  
+            })   
+            .finally( () => {
+                preloader.classList.remove('section-preloader_visible');
             });
-                
-            /*.finally());*/
     };
 
     //создаем параметры запроса
