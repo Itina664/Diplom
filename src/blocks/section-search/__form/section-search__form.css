@@ -1,5 +1,5 @@
 @media screen and (min-width: 320px) {
-    .section-search__field-container {
+    .section-search__form {
         margin: 0;
         padding-top: 22px;
         padding-bottom: 22px;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .section-search__field-container {
+    .section-search__form {
         padding-top: 32px;
         padding-bottom: 0;
     }

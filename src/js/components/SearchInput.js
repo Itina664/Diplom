@@ -15,10 +15,9 @@ export default class SearchInput {
     }
     
     //очищение полей
-    reset(input, errorTheme) {
-      input.value = '';
+    /*reset(errorTheme) {
       errorTheme.textContent = '';
-    }
+    }*/
 
     //установление кнопки submit активной/неактивной в зависимоти от проверки на валидность
     setSubmitButtonState (buttonSubmit) {

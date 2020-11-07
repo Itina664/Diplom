@@ -5,13 +5,11 @@ export default class NewsApi {
       this.lastday = lastday;
       this.today = today;
       this.apiKey = apiKey;
-      /*this.headers = headers;*/
     }
 
     getNewsCards(request) {
         return fetch(`${this.baseUrl}q=${request}&from=${this.lastday}&to=${this.today}&apiKey=${this.apiKey}`, {
             method: 'GET',
-            /*headers: this.headers*/
             })
         .then(res => {
             return this._getResponseData(res) 

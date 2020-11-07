@@ -27,6 +27,10 @@
     margin-right: 0;
 }
 
+.section-result__card-link:last-of-type {
+    margin-right: 0;
+}
+
 /*.section-result__card-link:nth-of-type(6) {
     margin-right: 0;
 }

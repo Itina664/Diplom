@@ -26,14 +26,6 @@ import "./css-pages/analytics.css";
     const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
-    
-    /*function resetCardList(requestInput) {
-        if (!(requestInput.value = '')) {
-            newsCardList.reset(dateCard, titleCard, textCard, authorCard);
-        } else {
-            return;
-        }
-    };*/
 
     function functionSearch(event) {
         event.preventDefault(event);
@@ -52,11 +44,12 @@ import "./css-pages/analytics.css";
                 localStorageAdapter.setItemLocalStorage(1, data);
                 localStorageAdapter.getItemLocalStorage(1);
                 /*const getFromStorageData = JSON.parse(storageData); //в объект*/
-                const dataObj = data;
+                console.log(data.articles[0].source.name);
 
-                /*resetCardList(requestInput);*/
-                newsCard.create(dataObj.publishedAt, dataObj.title, dataObj.description, dataObj.author, dataObj.urlToImage);
-                newsCardList.render(dataObj.articles);   
+                /*newsCard.create(data.articles);*/
+                newsCardList.render(data.articles); 
+                console.log(`requestInput.value= ${requestInput.value}`);
+                newsCardList.reset(requestInput);  
 
                 cardsContainer.classList.remove('section-result__cards-container_hidden');
                 titleResult.classList.remove('section-result__title-container_hidden');
@@ -71,10 +64,10 @@ import "./css-pages/analytics.css";
     };
 
     //создаем параметры запроса
-    const baseUrl = 'http://newsapi.org/v2/everything?';
+    const baseUrl = 'http://nomoreparties.co/news/v2/everything?';
     const today = new Date();
     const lastday = new Date(today - (7 * 24 * 3600 * 1000));
-    const apiKey = 'bb30c4aebb704160a1beca231e4eae3a';
+    const apiKey = '99c4ae00d799499b8dfd53c30ad00465';
     const newsApi = new NewsApi(baseUrl, requestInput, lastday, today, apiKey, 
         {
             'Content-Type': 'application/json'

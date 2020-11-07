@@ -1,8 +1,10 @@
+import { formateDate } from '../utils/formateDate';
+
 export default class NewsCard {
     /*constructor(card) {
         this.card = card;
     }*/
-  
+
     create(date, text, title, infoagency, link) {
         const card = document.createElement('a');
         const cardImage = document.createElement('div');
@@ -10,6 +12,7 @@ export default class NewsCard {
         const cardTitle = document.createElement('p');
         const cardText = document.createElement('p');
         const cardInfoagency = document.createElement('p');
+        const formattedDate = formateDate(date);
     
         card.classList.add('section-result__card-link');
         cardImage.classList.add('section-result__card-image');
@@ -24,7 +27,7 @@ export default class NewsCard {
         card.appendChild(cardText);
         card.appendChild(cardInfoagency);
     
-        cardDate.textContent = date;
+        cardDate.textContent = formattedDate;
         cardTitle.textContent = title;
         cardText.textContent = text;
         cardInfoagency.textContent = infoagency;
@@ -37,4 +40,12 @@ export default class NewsCard {
     
         return card;
     };
+
+    /*formateDate() {
+        const date = new Date();
+        console.log(`dateFD= ${date}`);
+    
+        return `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`
+    
+    }*/
 }

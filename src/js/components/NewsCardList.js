@@ -10,14 +10,15 @@ export default class NewsCardList {
       appendChild(this.card.create(date, text, title, infoagency, link));
     };
 
-    reset(date, text, title, infoagency) {
-      console.log(`date= ${date}`);
-      console.log(`text= ${text}`);
-      date.textContent = '';
-      text.textContent = '';
-      title.textContent = '';
-      infoagency.textContent = '';
-
+    reset(input) {
+      if (!input) {
+        console.log(`date= ${date}`);
+        console.log(`text= ${text}`);
+        this.date.textContent = '';
+        this.text.textContent = '';
+        this.title.textContent = '';
+        this.infoagency.textContent = '';
+      } else return;
     };
 
     render(result) {
