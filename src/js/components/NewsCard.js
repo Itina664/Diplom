@@ -41,11 +41,11 @@ export default class NewsCard {
         return card;
     };
 
-    /*formateDate() {
-        const date = new Date();
-        console.log(`dateFD= ${date}`);
     
-        return `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`
-    
-    }*/
+
+    //метод для открытия новости на отдельной странице
+  /*newsOpen = (event) => {
+    this.news.src = event.target.card.slice(5, -2);
+    this.popup.togglePopup(document.querySelector('.popup-large-image'));
+};*/
 }

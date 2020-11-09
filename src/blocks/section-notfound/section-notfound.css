@@ -9,5 +9,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+}
+
+.section-notfound_hidden {
     display: none;
 }

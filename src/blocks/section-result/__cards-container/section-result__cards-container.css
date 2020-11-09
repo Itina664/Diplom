@@ -17,6 +17,9 @@
         margin-left: 40px;
         margin-right: 40px;
         width: calc(100% - 40px - 40px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }   
 
@@ -26,9 +29,12 @@
         margin-right: 104px;
         margin-bottom: 64px;
         width: calc(100% - 104px - 104px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
 .section-result__cards-container_hidden {
-    overflow: hidden;
+    display: none;
 }

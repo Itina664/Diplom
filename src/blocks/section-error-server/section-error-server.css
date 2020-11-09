@@ -1,0 +1,28 @@
+@import url(./__message/section-error-server__message.css);
+@import url(./_hidden/section-error-server_hidden.css);
+
+@media screen and (min-width: 320px) {
+    .section-error-server {
+        margin: 0 auto;
+        margin-left: 80px;
+        margin-right: 80px;
+        background: #fff;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-error-server {
+        margin-left: 200px;
+        margin-right: 200px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .section-error-server {
+        margin-left: 400px;
+        margin-right: 400px;
+        display: flex;
+    }
+}

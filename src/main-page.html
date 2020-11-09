@@ -47,17 +47,22 @@
       </div>      
     </div>
 
-    <div class="section-preloader">
+    <div class="section-preloader section-preloader_hidden">
       <i class="circle-preloader"></i>
       <p class="section-preloader__text">Идет поиск новостей</p>
     </div>
     
-    <div class="section-notfound">
+    <div class="section-notfound section-notfound_hidden">
       <div class="section-notfound__container">
         <img src="<%=require('./images/not-found_v1.png')%>" alt="Смайлик ~разочарование" class="section-notfound__image">
         <p class="section-notfound__title">Ничего не найдено</p>
-        <p class="section-notfound__subtitle">К сожалению по вашему запросу ничего не найдено</p>
+        <p class="section-notfound__subtitle">К сожалению по вашему запросу ничего не найдено</p> 
       </div>
+    </div>
+    
+    <div class="section-error-server_hidden section-error-server">
+      <p class="section-error-server__message">Во время запроса произошла ошибка. 
+          Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
     </div>
 
     <div class="section-result">
@@ -67,48 +72,8 @@
           <p class="section-result__button-link">Посмотреть аналитику &gt;</p>
         </a>
       </div>
-      <div class="section-result__cards-container">
+      <div class="section-result__cards-container"> 
         <!--<a href="#" class="section-result__card-link">
-          <img src="<%=require('./images/parks.png')%>" alt="Изображение растения на фотоснимке" class="section-result__card-image">
-          <p class="section-result__card-date">2 августа, 2019</p>
-          <p class="section-result__card-title">Национальное достояние -&nbsp;парки</p>
-          <p class="section-result__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-          система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="section-result__card-infoagency">лента.ру</p>
-        </a>
-        <a href="#" class="section-result__card-link">
-          <img src="<%=require('./images/parks.png')%>" alt="Изображение растения на фотоснимке" class="section-result__card-image">
-          <p class="section-result__card-date">2 августа, 2019</p>
-          <p class="section-result__card-title">Национальное достояние -&nbsp;парки</p>
-          <p class="section-result__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-          система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="section-result__card-infoagency">лента.ру</p>
-        </a>
-        <a href="#" class="section-result__card-link">
-          <img src="<%=require('./images/parks.png')%>" alt="Изображение растения на фотоснимке" class="section-result__card-image">
-          <p class="section-result__card-date">2 августа, 2019</p>
-          <p class="section-result__card-title">Национальное достояние -&nbsp;парки</p>
-          <p class="section-result__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-          система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="section-result__card-infoagency">лента.ру</p>
-        </a>
-        <a href="#" class="section-result__card-link">
-          <img src="<%=require('./images/parks.png')%>" alt="Изображение растения на фотоснимке" class="section-result__card-image">
-          <p class="section-result__card-date">2 августа, 2019</p>
-          <p class="section-result__card-title">Национальное достояние -&nbsp;парки</p>
-          <p class="section-result__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-          система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="section-result__card-infoagency">лента.ру</p>
-        </a>
-        <a href="#" class="section-result__card-link">
-          <img src="<%=require('./images/parks.png')%>" alt="Изображение растения на фотоснимке" class="section-result__card-image">
-          <p class="section-result__card-date">2 августа, 2019</p>
-          <p class="section-result__card-title">Национальное достояние -&nbsp;парки</p>
-          <p class="section-result__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-          система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="section-result__card-infoagency">лента.ру</p>
-        </a>
-        <a href="#" class="section-result__card-link">
           <img src="<%=require('./images/parks.png')%>" alt="Изображение растения на фотоснимке" class="section-result__card-image">
           <p class="section-result__card-date">2 августа, 2019</p>
           <p class="section-result__card-title">Национальное достояние -&nbsp;парки</p>
@@ -119,6 +84,13 @@
       </div>
       <button type="submit" class="section-result__button section-result__button_hidden">Показать еще</button>
     </div>
+
+    <!--<div class="popup popup-large-image">
+      <div class="popup-large-image__inner">
+        <img src="" alt="иконка закрытия" class="popup__close popup-large-image__button-close">
+        <img src="" alt="" class="popup-large-image__image">
+      </div>
+    </div>-->
 
     <div class="section-author">
       <div class="section-author__container">

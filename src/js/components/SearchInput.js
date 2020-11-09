@@ -1,38 +1,24 @@
 export default class SearchInput {
-    constructor(form) {
-      this.form = form;
-    };
+  constructor(form) {
+    this.form = form;
+  };
   
-    //валидация поля input
-    checkInputValidity (input, errorTheme) {
-      if (input.validity.valueMissing) { //если поле пустое
-        errorTheme.textContent = "Нужно ввести ключевое слово";
-        errorTheme.classList.add('section-search__error-theme_active');
+  //валидация поля input
+  checkInputValidity (input, error, titleResult) {
+    if (input.validity.valueMissing) { //если поле пустое
+      error.textContent = "Нужно ввести ключевое слово";
+      error.classList.add('section-search__error-theme_active');
+      titleResult.classList.add('section-result__title-container_hidden');
+      return false;
+    } else { //если ошибок нет, то поле валидно
+      error.textContent = "";
+      error.classList.remove('section-search__error-theme_active');
+      return true; 
+    }
+  };
   
-      } else { //если ошибок нет, то поле валидно
-        errorTheme.textContent = "";
-      }
+  //очищение поля ошибки
+  reset(error) {
+      error.textContent = '';
     }
-    
-    //очищение полей
-    /*reset(errorTheme) {
-      errorTheme.textContent = '';
-    }*/
-
-    //установление кнопки submit активной/неактивной в зависимоти от проверки на валидность
-    setSubmitButtonState (buttonSubmit) {
-      if (this.form.checkValidity()) {
-        buttonSubmit.removeAttribute('disabled');
-      } else {
-        buttonSubmit.setAttribute('disabled', true);
-      }
-    }
-
-    //группирование обработчиков под одну крышу
-  setEventListeners() {
-    this.form.addEventListener('input', (event) => {
-      this.checkInputValidity(event.target, errorTheme);
-      this.setSubmitButtonState(this.form.querySelector('section-search__button'));
-    })
-  }
 }

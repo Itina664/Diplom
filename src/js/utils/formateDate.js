@@ -1,6 +1,6 @@
 export function formateDate(date) {
     const xDate = new Date(date);
-    const month = `${xDate.getMonth(date)}`;
+    /*const month = `${xDate.getMonth(date)}`;*/
     
     const arr=[
        'Января',
