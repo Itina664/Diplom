@@ -18,7 +18,6 @@ import "./css-pages/analytics.css";
     const sectionNotfound = document.querySelector('.section-notfound_hidden');
     const sectionErrorServer = document.querySelector('.section-error-server_hidden');
     const titleResult = document.querySelector('.section-result__title-container_hidden');
-    const showMoreButton = document.querySelector('.section-result__button_hidden');
     
     const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
@@ -39,7 +38,7 @@ import "./css-pages/analytics.css";
 
                     preloader.classList.add('section-preloader_hidden');
                     cardsContainer.innerHTML = '';
-                    newsCardList.render(data.articles, showMoreButton);
+                    newsCardList.render(data.articles);
                     
                     titleResult.classList.remove('section-result__title-container_hidden'); 
                 } else {

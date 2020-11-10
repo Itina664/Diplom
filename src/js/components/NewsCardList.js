@@ -9,32 +9,29 @@ export default class NewsCardList {
     this.container.appendChild(this.card.create(date, text, title, infoagency, link, url));
   };
 
-  render(result, button) {
+  render(result) {
     this.resultForCut = result;
-    const count = 0;
-    this.showMore(this.resultForCut, button);
+    const button = document.querySelector('.section-result__button');
+
+    this.showMore();
+
+    if (this.resultForCut.length != 0) {
+      button.classList.remove('section-result__button_hidden');
+      button.addEventListener('click', () => {this.showMore(this.resultForCut, button);
+      });
+    } else {
+      button.classList.add('section-result__button_hidden');
+      return;
+    } 
   };
 
-  showMore(resultForCut, button) {
-    console.log(`до откусывания resultForCut`);
-    console.log(resultForCut);
-
-    resultForCut.slice(0, 3).forEach((item) => {
+  showMore() {
+    this.resultForCut.slice(0, 3).forEach((item) => {
       this.addCard(item.publishedAt, item.description, item.title, item.source.name, item.urlToImage, item.url);
     });
     
-    resultForCut = resultForCut.slice(3);
-    console.log(`после откусывания resultForCut`);
-    console.log(resultForCut);
+    this.resultForCut = this.resultForCut.slice(3);
     
-    if (resultForCut.length != 0) {
-      button.classList.remove('section-result__button_hidden');
-      document.querySelector('.section-result__button').addEventListener('click', () => {
-        this.showMore(resultForCut, button);
-      });
-    } else {
-      document.querySelector('.section-result__button').classList.add('section-result__button_hidden');
-      return;
-    }  
+     
   };
 }
