@@ -70,7 +70,7 @@ import "./css-pages/analytics.css";
     });
 
     //создаем параметры запроса
-    const baseUrl = 'http://nomoreparties.co/news/v2/everything?';
+    const baseUrl = 'https://nomoreparties.co/news/v2/everything?';
     const today = new Date();
     const lastday = new Date(today - (7 * 24 * 3600 * 1000));
     const apiKey = 'c39c455b159546c983cf897e239dd2bf';
