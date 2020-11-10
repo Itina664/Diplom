@@ -5,7 +5,7 @@ export default class NewsCard {
         this.card = card;
     }*/
 
-    create(date, text, title, infoagency, link) {
+    create(date, text, title, infoagency, link, url) {
         const card = document.createElement('a');
         const cardImage = document.createElement('div');
         const cardDate = document.createElement('p');
@@ -37,15 +37,16 @@ export default class NewsCard {
         this.cardTitle = cardTitle;
         this.cardText = cardText;
         this.cardInfoagency = cardInfoagency;
-    
+        this.url = url;
+
+    card.addEventListener('click', () => {
+        window.open(this.url);
+    });
+
         return card;
     };
 
     
-
-    //метод для открытия новости на отдельной странице
-  /*newsOpen = (event) => {
-    this.news.src = event.target.card.slice(5, -2);
-    this.popup.togglePopup(document.querySelector('.popup-large-image'));
-};*/
+    
+    
 }

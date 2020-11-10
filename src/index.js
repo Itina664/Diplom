@@ -18,12 +18,7 @@ import "./css-pages/analytics.css";
     const sectionNotfound = document.querySelector('.section-notfound_hidden');
     const sectionErrorServer = document.querySelector('.section-error-server_hidden');
     const titleResult = document.querySelector('.section-result__title-container_hidden');
-    /*const buttonSubmit = document.querySelector('.section-search__button');*/
-    const showMore = document.querySelector('.section-result__button');
-    const dateCard = document.querySelector('.section-result__card-date');
-    const titleCard = document.querySelector('.section-result__card-title');
-    const textCard = document.querySelector('.section-result__card-text');
-    const authorCard = document.querySelector('.section-result__card-infoagency');
+    const showMoreButton = document.querySelector('.section-result__button_hidden');
     
     const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
@@ -40,12 +35,12 @@ import "./css-pages/analytics.css";
                     /*const storageData = JSON.stringify(data); //превращаем данные в строку*/
                     localStorageAdapter.setItemLocalStorage(1, data);
                     localStorageAdapter.getItemLocalStorage(1);
-                    console.log(`data= ${data}`);
                     /*const getFromStorageData = JSON.parse(storageData); //в объект*/
+
                     preloader.classList.add('section-preloader_hidden');
                     cardsContainer.innerHTML = '';
-                    newsCardList.render(data.articles);
-                    console.log(`data.articles[0]= ${data.articles[0]}`);
+                    newsCardList.render(data.articles, showMoreButton);
+                    
                     titleResult.classList.remove('section-result__title-container_hidden'); 
                 } else {
                     titleResult.classList.add('section-result__title-container_hidden');
@@ -62,7 +57,13 @@ import "./css-pages/analytics.css";
             });
         } else {
             cardsContainer.innerHTML = '';
+            titleResult.classList.add('section-result__title-container_hidden');
+            sectionNotfound.classList.add('section-notfound_hidden');
         };
+        cardsContainer.innerHTML = '';
+        titleResult.classList.add('section-result__title-container_hidden');
+        sectionNotfound.classList.add('section-notfound_hidden');
+
     };
     
     requestInput.addEventListener('focus', () => {
@@ -73,7 +74,7 @@ import "./css-pages/analytics.css";
     const baseUrl = 'http://newsapi.org/v2/everything?';
     const today = new Date();
     const lastday = new Date(today - (7 * 24 * 3600 * 1000));
-    const apiKey = '195eaa9972bd4484872b80c4b9494d03';
+    const apiKey = 'c39c455b159546c983cf897e239dd2bf';
     const newsApi = new NewsApi(baseUrl, requestInput, lastday, today, apiKey, 
         {
             'Content-Type': 'application/json'
@@ -81,4 +82,9 @@ import "./css-pages/analytics.css";
     
     //активизируем поиск новостей по кнопке сабмит на форме
     formSearch.addEventListener('submit', functionValidity);
+
+    //переход в новость на новой странице
+    
+
+
 }())

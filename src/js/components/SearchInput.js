@@ -4,11 +4,10 @@ export default class SearchInput {
   };
   
   //валидация поля input
-  checkInputValidity (input, error, titleResult) {
+  checkInputValidity (input, error) {
     if (input.validity.valueMissing) { //если поле пустое
       error.textContent = "Нужно ввести ключевое слово";
       error.classList.add('section-search__error-theme_active');
-      titleResult.classList.add('section-result__title-container_hidden');
       return false;
     } else { //если ошибок нет, то поле валидно
       error.textContent = "";
