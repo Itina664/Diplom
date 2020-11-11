@@ -2,6 +2,7 @@
 @import url(./__subhead/analytics-general__subhead.css);
 @import url(./__title/analytics-general__title.css);
 @import url(./__subtitle/analytics-general__subtitle.css);
+@import url(./__request-span/analytics-general__request-span.css);
 
 @media screen and (min-width: 320px) {
     .analytics-general {

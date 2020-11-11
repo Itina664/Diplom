@@ -3,6 +3,7 @@ import LocalStorageAdapter from './js/modules/LocalStorageAdapter.js';
 import NewsCard from './js/components/NewsCard.js';
 import NewsCardList from './js/components/NewsCardList.js';
 import SearchInput from './js/components/SearchInput.js';
+import Statistics from './js/components/Statistics.js';
 
 import "./css-pages/about-page.css";
 import "./css-pages/main-page.css";
@@ -22,6 +23,7 @@ import "./css-pages/analytics.css";
     const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
+    const statistics = new Statistics();
     
     function functionValidity(event) {
         event.preventDefault(event);
@@ -30,6 +32,7 @@ import "./css-pages/analytics.css";
             newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
                 if (!(data.articles.length == 0)) {
+                    console.log(data);
                     const localStorageAdapter = new LocalStorageAdapter(data);
                     /*const storageData = JSON.stringify(data); //превращаем данные в строку*/
                     localStorageAdapter.setItemLocalStorage(1, data);
@@ -39,6 +42,7 @@ import "./css-pages/analytics.css";
                     preloader.classList.add('section-preloader_hidden');
                     cardsContainer.innerHTML = '';
                     newsCardList.render(data.articles);
+                    statistics.newsCount(requestInput);
                     
                     titleResult.classList.remove('section-result__title-container_hidden'); 
                 } else {
@@ -70,7 +74,7 @@ import "./css-pages/analytics.css";
     });
 
     //создаем параметры запроса
-    const baseUrl = 'https://nomoreparties.co/news/v2/everything?';
+    const baseUrl = 'http://newsapi.org/v2/everything?';
     const today = new Date();
     const lastday = new Date(today - (7 * 24 * 3600 * 1000));
     const apiKey = 'c39c455b159546c983cf897e239dd2bf';
