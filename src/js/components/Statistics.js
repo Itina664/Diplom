@@ -2,9 +2,10 @@ export default class Statistics {
 
 
     newsCount(request) {
+        console.log(`request= ${request}`);
         const requestSpan = document.querySelector('.analytics-general__request-span');
-        requestSpan.texContent = request;
-        console.log(`requestSpan= ${requestSpan}`);
+        requestSpan.textContent = request.value;
+        console.log(`requestSpan= ${requestSpan.textContent}`);
     }
 
 }

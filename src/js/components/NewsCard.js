@@ -33,10 +33,10 @@ export default class NewsCard {
         cardInfoagency.textContent = infoagency;
         cardImage.style.backgroundImage = `url(${link})`;
         
-        this.cardDate = cardDate;
+        /*this.cardDate = cardDate;
         this.cardTitle = cardTitle;
         this.cardText = cardText;
-        this.cardInfoagency = cardInfoagency;
+        this.cardInfoagency = cardInfoagency;*/
         this.url = url;
 
     card.addEventListener('click', () => {

@@ -42,9 +42,8 @@ import "./css-pages/analytics.css";
                     preloader.classList.add('section-preloader_hidden');
                     cardsContainer.innerHTML = '';
                     newsCardList.render(data.articles);
-                    statistics.newsCount(requestInput);
-                    
-                    titleResult.classList.remove('section-result__title-container_hidden'); 
+                    titleResult.classList.remove('section-result__title-container_hidden');
+                    statistics.newsCount(requestInput.value); 
                 } else {
                     titleResult.classList.add('section-result__title-container_hidden');
                     sectionNotfound.classList.remove('section-notfound_hidden');
