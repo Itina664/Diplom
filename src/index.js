@@ -1,14 +1,10 @@
 import NewsApi from './js/modules/NewsApi.js';
-import LocalStorageAdapter from './js/modules/LocalStorageAdapter.js';
+import DataStorage from './js/modules/DataStorage.js';
 import NewsCard from './js/components/NewsCard.js';
 import NewsCardList from './js/components/NewsCardList.js';
 import SearchInput from './js/components/SearchInput.js';
-import Statistics from './js/components/Statistics.js';
 
-import "./css-pages/about-page.css";
 import "./css-pages/main-page.css";
-import "./css-pages/analytics.css";
-
 
 (function () {
     const cardsContainer = document.querySelector('.section-result__cards-container');
@@ -23,7 +19,6 @@ import "./css-pages/analytics.css";
     const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
-    const statistics = new Statistics();
     
     function functionValidity(event) {
         event.preventDefault(event);
@@ -31,19 +26,16 @@ import "./css-pages/analytics.css";
             preloader.classList.remove('section-preloader_hidden');
             newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
-                if (!(data.articles.length == 0)) {
+                if (data.articles.length !== 0) {
                     console.log(data);
-                    const localStorageAdapter = new LocalStorageAdapter(data);
-                    /*const storageData = JSON.stringify(data); //превращаем данные в строку*/
-                    localStorageAdapter.setItemLocalStorage(1, data);
-                    localStorageAdapter.getItemLocalStorage(1);
-                    /*const getFromStorageData = JSON.parse(storageData); //в объект*/
-
+                    const dataStorage = new DataStorage(data, requestInput);
+                    dataStorage.setData(data);
+                    dataStorage.getData();
+                    dataStorage.setRequest(requestInput);
                     preloader.classList.add('section-preloader_hidden');
                     cardsContainer.innerHTML = '';
                     newsCardList.render(data.articles);
                     titleResult.classList.remove('section-result__title-container_hidden');
-                    statistics.newsCount(requestInput.value); 
                 } else {
                     titleResult.classList.add('section-result__title-container_hidden');
                     sectionNotfound.classList.remove('section-notfound_hidden');
@@ -65,7 +57,6 @@ import "./css-pages/analytics.css";
         cardsContainer.innerHTML = '';
         titleResult.classList.add('section-result__title-container_hidden');
         sectionNotfound.classList.add('section-notfound_hidden');
-
     };
     
     requestInput.addEventListener('focus', () => {
@@ -84,9 +75,4 @@ import "./css-pages/analytics.css";
     
     //активизируем поиск новостей по кнопке сабмит на форме
     formSearch.addEventListener('submit', functionValidity);
-
-    //переход в новость на новой странице
-    
-
-
 }())

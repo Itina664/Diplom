@@ -21,7 +21,7 @@ export default class NewsApi {
             return Promise.reject(`Ошибка: ${res.status}`); 
         }
         
-        return res.clone().json();
+        return res.json();
         
     }
 

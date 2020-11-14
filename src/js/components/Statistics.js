@@ -1,38 +1,32 @@
 export default class Statistics {
+  constructor(dataStorage) {
+    this.dataStorage = dataStorage;
+  };
 
+  keyWordTitle() {
+    const requestSpan = document.querySelector('.analytics-general__request-span');
+    requestSpan.textContent = this.dataStorage.getRequest(); 
+  };
 
-    newsCount(request) {
-        console.log(`request= ${request}`);
-        const requestSpan = document.querySelector('.analytics-general__request-span');
-        requestSpan.textContent = request.value;
-        console.log(`requestSpan= ${requestSpan.textContent}`);
-    }
+  countNewsWeek() {
+    const subtitleNewsWeek = document.querySelector('.analytics-general__subtitle_news-week');
+    subtitleNewsWeek.textContent = this.dataStorage.getTotalResults();
+    };
 
-}
-    /*render(result) {
-        const button = document.querySelector('.section-result__button');
-        this.resultForCut = result;
-    
-        this.showMore();
-    
-        if (this.resultForCut.length > 0) {
-          button.classList.remove('section-result__button_hidden');
-          button.addEventListener('click', () => {
-            if (this.resultForCut.length > 3) { 
-              this.showMore(this.resultForCut, button);
-            } else {
-              button.classList.add('section-result__button_hidden');
-              this.showMore(this.resultForCut, button);
-            }
-          });
-        } else {
-          button.classList.add('section-result__button_hidden');
-        }     
-      };
-    
-      showMore() {
-        this.resultForCut.slice(0, 3).forEach((item) => {
-          this.addCard(item.publishedAt, item.description, item.title, item.source.name, item.urlToImage, item.url);
-        });
-        this.resultForCut = this.resultForCut.slice(3);
-      };*/
+  countMentionWeek() {
+    const countMentionTitle = this.dataStorage.getArticles().reduce((prev, next, arr) => {
+      const count = (next.title.match(this.dataStorage.getRequest())  || []).length;
+      prev += count;
+      return prev;
+    }, 0);
+
+    const countMentionDescrip = this.dataStorage.getArticles().reduce((prev, next, arr) => {
+      const count = (next.description.match(this.dataStorage.getRequest())  || []).length;
+      prev += count;
+      return prev;
+    }, 0);
+
+    const subtitleMentionWeek = document.querySelector('.analytics-general__subtitle_mention-week');
+    subtitleMentionWeek.textContent = countMentionTitle + countMentionDescrip;
+  };
+};
