@@ -40,7 +40,7 @@ export default class NewsCard {
         this.url = url;
 
     card.addEventListener('click', () => {
-        window.open(this.url);
+        window.open(url);
     });
 
         return card;

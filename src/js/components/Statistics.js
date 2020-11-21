@@ -57,9 +57,18 @@ export default class Statistics {
         
           if ((formateDateDigits(this.dataStorage.getArticles()[j].publishedAt)) == 
           (formateDateDigits(new Date() - new Date(i * 24 * 3600 * 1000)))) {
-
-            countTitleDay[j] = (this.dataStorage.getArticles()[j].title.toLowerCase().match(this.keyWord) || []).length;
-            countDescriptionDay[j] = (this.dataStorage.getArticles()[j].description.toLowerCase().match(this.keyWord) || []).length;
+            
+            if (this.dataStorage.getArticles()[j].title !== null) {
+              countTitleDay[j] = (this.dataStorage.getArticles()[j].title.toLowerCase().match(this.keyWord) || []).length;
+            } else {
+              countTitleDay[j] = 0;
+            }
+            if (this.dataStorage.getArticles()[j].description !== null) {
+              countDescriptionDay[j] = (this.dataStorage.getArticles()[j].description.toLowerCase().match(this.keyWord) || []).length;
+            } else {
+              countDescriptionDay[j] = 0;
+            }
+    
             countDate = countDate + countTitleDay[j] + countDescriptionDay[j];
             countDateResult = Math.ceil((countDate / this.dataStorage.getTotalResults()) * 100);
           }
