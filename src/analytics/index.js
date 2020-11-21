@@ -8,3 +8,7 @@ const statistics = new Statistics(new DataStorage);
 statistics.keyWordTitle();
 statistics.countNewsWeek();
 statistics.countMentionWeek();
+statistics.chartDate();
+statistics.chartBar();
+
+

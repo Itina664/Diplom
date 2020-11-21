@@ -4,6 +4,8 @@ import NewsCard from './js/components/NewsCard.js';
 import NewsCardList from './js/components/NewsCardList.js';
 import SearchInput from './js/components/SearchInput.js';
 
+import { formateDateDigits } from './js/utils/formateDateDigits';
+
 import "./css-pages/main-page.css";
 
 (function () {
@@ -20,11 +22,14 @@ import "./css-pages/main-page.css";
     const newsCardList = new NewsCardList(cardsContainer, newsCard);//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
     
+    const formattedLastdayDigits = formateDateDigits(new Date() - new Date(6 * 24 * 3600 * 1000));
+    const formattedTodayDigits = formateDateDigits(new Date());
+
     function functionValidity(event) {
         event.preventDefault(event);
-        if (searchInput.checkInputValidity(requestInput, errorTheme,titleResult)) { 
+        if (searchInput.checkInputValidity(requestInput, errorTheme, titleResult)) { 
             preloader.classList.remove('section-preloader_hidden');
-            newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
+            newsApi.getNewsCards(requestInput.value, formattedLastdayDigits, formattedTodayDigits)//вызываем запрос новостей
             .then((data) => {
                 if (data.articles.length !== 0) {
                     console.log(data);
@@ -65,13 +70,8 @@ import "./css-pages/main-page.css";
 
     //создаем параметры запроса
     const baseUrl = 'http://newsapi.org/v2/everything?';
-    const today = new Date();
-    const lastday = new Date(today - (7 * 24 * 3600 * 1000));
-    const apiKey = 'c39c455b159546c983cf897e239dd2bf';
-    const newsApi = new NewsApi(baseUrl, requestInput, lastday, today, apiKey, 
-        {
-            'Content-Type': 'application/json'
-        });
+    const apiKey = '086a02d9d4244c469d1aba48e9b1dd8f';
+    const newsApi = new NewsApi(baseUrl, apiKey);
     
     //активизируем поиск новостей по кнопке сабмит на форме
     formSearch.addEventListener('submit', functionValidity);

@@ -1,4 +1,4 @@
-import { formateDate } from '../utils/formateDate';
+import { formateDateWords } from '../utils/formateDateWords';
 
 export default class NewsCard {
     /*constructor(card) {
@@ -12,7 +12,7 @@ export default class NewsCard {
         const cardTitle = document.createElement('p');
         const cardText = document.createElement('p');
         const cardInfoagency = document.createElement('p');
-        const formattedDate = formateDate(date);
+        const formattedDateWords = formateDateWords(date);
     
         card.classList.add('section-result__card-link');
         cardImage.classList.add('section-result__card-image');
@@ -27,7 +27,7 @@ export default class NewsCard {
         card.appendChild(cardText);
         card.appendChild(cardInfoagency);
     
-        cardDate.textContent = formattedDate;
+        cardDate.textContent = formattedDateWords;
         cardTitle.textContent = title;
         cardText.textContent = text;
         cardInfoagency.textContent = infoagency;

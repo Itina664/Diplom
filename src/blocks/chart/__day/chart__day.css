@@ -1,9 +1,10 @@
 .chart__day {
     margin: 0;
+    margin-bottom: 28px;
     font-family: 'Roboto', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 80px;
-    color: #1a1b22; 
+    color: #1a1b22;
 }

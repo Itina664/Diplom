@@ -1,4 +1,4 @@
-export function formateDate(date) {
+export function formateDateWords(date) {
     const xDate = new Date(date);
     /*const month = `${xDate.getMonth(date)}`;*/
     
@@ -17,5 +17,5 @@ export function formateDate(date) {
        'Декабря',
     ];
     
-    return(`${xDate.getDate(date)} ${arr[xDate.getMonth(date)]} ${xDate.getFullYear(date)}`);
+    return(`${xDate.getUTCDate(date)} ${arr[xDate.getUTCMonth(date)]} ${xDate.getUTCFullYear(date)}`);
 };
