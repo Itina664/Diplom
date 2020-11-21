@@ -69,7 +69,7 @@ import "./css-pages/main-page.css";
     });
 
     //создаем параметры запроса
-    const baseUrl = 'https://newsapi.org/v2/everything?';
+    const baseUrl = 'http://newsapi.org/v2/everything?';
     const apiKey = '086a02d9d4244c469d1aba48e9b1dd8f';
     const newsApi = new NewsApi(baseUrl, apiKey);
     
