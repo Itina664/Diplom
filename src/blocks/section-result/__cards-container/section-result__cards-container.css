@@ -7,7 +7,7 @@
         width: calc(100% - 16px - 16px);;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: left;
         background: #f5f6f7;
     }
 }  
@@ -17,9 +17,9 @@
         margin-left: 40px;
         margin-right: 40px;
         width: calc(100% - 40px - 40px);
-        display: flex;
+        /*display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-between;*/
     }
 }   
 
@@ -29,9 +29,9 @@
         margin-right: 104px;
         margin-bottom: 64px;
         width: calc(100% - 104px - 104px);
-        display: flex;
+        /*display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-between;*/
     }
 }
 

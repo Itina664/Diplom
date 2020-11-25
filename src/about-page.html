@@ -8,6 +8,8 @@
   <title>News Analyzer</title>
   <!--<link rel="stylesheet" href="./vendor/normalize.css">-->
   <!--<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">-->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../package/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -74,64 +76,50 @@
         <img src="<%=require('./images/author.jpg')%>" alt="Фотопортрет автора сайта" class="section-author__image">
         <div class="section-author__text">
           <h1 class="section-author__caption">Об авторе</h1>
-          <p class="section-author__comment">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
-          <p class="section-author__comment">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите,
-          оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+          <p class="section-author__comment">Меня зовут Ирина Шмигельская.</p>
+          <p class="section-author__comment">В процессе обучения на курсе Практикума я обучилась верстке, базовым навыкам JS, составлению и обработке запросов на сервер, методологии БЭМ. В работе использую технологии HTML5, CSS3, JS, Webpack, Git.
+            Потенциальным заказчикам могу быть полезной в части создания и поддержки небольших сайтов.</p>
         </div>
       </div>
     </div>
 
     <div class="section-commit">
-    
       <div class="section-result__title-container">
         <p class="section-result__name">История коммитов из&nbsp;Github</p>
-        <a href="https://github.com" class="section-result__link">
+        <a href="" class="section-result__link">
           <p class="section-result__button-link">Открыть в Github &gt;</p>
         </a>
       </div>
-      <div class="section-commit__commits-container">
-        <a href="#" class="section-commit__commit-link">
-          <p class="section-commit__commit-date">14 августа, 2019</p>
-          <div class="section-commit__person-container">
-            <img src="<%=require('./images/mary.png')%>" alt="Фото автора комментария" class="section-commit__person-image">
-            <div class="section-commit__name-container">
-              <p class="section-commit__person-name">Мария Федорова</p>
-              <p class="section-commit__person-mail">mariiifed@yandex.ru</p>
-            </div>
-          </div>
-          <p class="section-commit__commit-text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open   Tools >
-            Plugins > Available plugins   and find and install Emmet plugin.</p>
-        </a>
-        <a href="#" class="section-commit__commit-link">
-          <p class="section-commit__commit-date">14 августа, 2019</p>
-          <div class="section-commit__person-container">
-            <img src="<%=require('./images/mary.png')%>" alt="Фото автора комментария" class="section-commit__person-image">
-            <div class="section-commit__name-container">
-              <p class="section-commit__person-name">Мария Федорова</p>
-              <p class="section-commit__person-mail">mariiifed@yandex.ru</p>
-            </div>
-          </div>
-          <p class="section-commit__commit-text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open   Tools >
-            Plugins > Available plugins   and find and install Emmet plugin.</p>
-        </a>
-        <a href="#" class="section-commit__commit-link">
-          <p class="section-commit__commit-date">14 августа, 2019</p>
-          <div class="section-commit__person-container">
-            <img src="<%=require('./images/mary.png')%>" alt="Фото автора комментария" class="section-commit__person-image">
-            <div class="section-commit__name-container">
-              <p class="section-commit__person-name">Мария Федорова</p>
-              <p class="section-commit__person-mail">mariiifed@yandex.ru</p>
-            </div>
-          </div>
-          <p class="section-commit__commit-text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open   Tools >
-            Plugins > Available plugins   and find and install Emmet plugin.</p>
-        </a>
-      </div>
-      <div class="section-commit__points-image">
-        <img src="<%=require('./images/3-points.png')%>" alt="Кнопки для пролистывания сладера" class="section-commit__points">
-      </div>
-    </div>
 
+      <div class="section-error-server_hidden section-error-server">
+        <p class="section-error-server__message">Во время запроса произошла ошибка. 
+            Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!--<a href="#" class="swiper-slide">
+            <p class="section-commit__commit-date">14 августа, 2019</p>
+            <div class="section-commit__person-container">
+              <img src="<%=require('./images/mary.png')%>" alt="Фото автора комментария" class="section-commit__person-image">
+              <div class="section-commit__name-container">
+                <p class="section-commit__person-name">Мария Федорова</p>
+                <p class="section-commit__person-mail">mariiifed@yandex.ru</p>
+              </div>
+            </div>
+            <p class="section-commit__commit-text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open   Tools >
+                Plugins > Available plugins   and find and install Emmet plugin.</p>
+          </a>-->
+        </div>
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination">
+          <!--<img src="<%=require('./images/3-points.png')%>" alt="Кнопки для пролистывания сладера" class="section-commit__points">-->
+        </div>
+    </div>
+    
+  </div>
     <footer class="footer">
       <div class="footer__container">
         <p class="footer__copyright">&#169; 2019 Supersite</p>
@@ -162,4 +150,6 @@
   </div>
  <!--<script src="<%= htmlWebpackPlugin.files.js %>"></script>-->
  <!--<script src="./about-page.js"></script>-->
+ <!-- Swiper JS -->
+ <script src="../package/swiper-bundle.min.js"></script>
 </body>

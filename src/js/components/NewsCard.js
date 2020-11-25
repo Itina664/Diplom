@@ -1,9 +1,6 @@
 import { formateDateWords } from '../utils/formateDateWords';
 
 export default class NewsCard {
-    /*constructor(card) {
-        this.card = card;
-    }*/
 
     create(date, text, title, infoagency, link, url) {
         const card = document.createElement('a');

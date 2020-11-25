@@ -1,5 +1,4 @@
-@import url(./__commits-container/section-commit__commits-container.css);
-@import url(./__commit-link/section-commit__commit-link.css);
+
 @import url(./__commit-date/section-commit__commit-date.css);
 @import url(./__commit-text/section-commit__commit-text.css);
 @import url(./__name-container/section-commit__name-container.css);
@@ -7,7 +6,7 @@
 @import url(./__person-image/section-commit__person-image.css);
 @import url(./__person-mail/section-commit__person-mail.css);
 @import url(./__person-name/section-commit__person-name.css);
-@import url(./__points-image/section-commit__points-image.css);
+
 
 
 .section-commit {

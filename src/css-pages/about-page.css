@@ -7,6 +7,10 @@
 @import url(../blocks/section-technology/section-technology.css);
 @import url(../blocks/section-result/section-result.css);
 @import url(../blocks/section-commit/section-commit.css);
+@import url(../blocks/swiper-pagination.css);
+@import url(../blocks/swiper-wrapper.css);
+@import url(../blocks/swiper-container.css);
+@import url(../blocks/swiper-slide.css);
 
 .body {
     width: 100%;
