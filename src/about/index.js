@@ -15,7 +15,7 @@ import 'swiper/swiper-bundle.css';
 Swiper.use([Navigation, Pagination]);
 
 // init Swiper:
-const swiper = new Swiper(document.querySelector('.section-commit__swiper-container'), {
+const swiper = new Swiper(document.querySelector('.swiper-container'), {
     speed: 400,
     spaceBetween: 100,
   
