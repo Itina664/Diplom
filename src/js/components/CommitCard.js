@@ -1,6 +1,8 @@
+import { formateDateWords } from '../utils/formateDateWords';
+
 export default class CommitCard {
 
-    create( ) {
+    create(date, message, email, name, avatar) {
         const commit = document.createElement('a');
         const commitAvatar = document.createElement('div');
         const commitDate = document.createElement('p');

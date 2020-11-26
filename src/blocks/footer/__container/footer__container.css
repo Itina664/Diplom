@@ -6,6 +6,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        align-items: center;
     }
 }
 
@@ -16,6 +17,7 @@
         height: 64px; 
         display: flex;
         flex-wrap: nowrap;
+        
 
     }
 }
@@ -25,5 +27,6 @@
         margin: 0 auto;
         width: calc(100% - 104px - 104px);
         height: 80px; 
+        
     }
 }

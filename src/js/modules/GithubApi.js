@@ -3,10 +3,8 @@ export default class GithubApi {
         this.baseUrl = baseUrl;
       }
 
-    getCommits() {
-        /*return fetch(`${this.baseUrl}q=${request}&from=${today}&apiKey=${this.apiKey}`)*/
-        /*return fetch(https://api.github.com/repos/yandex/localization-context-extension/commits)*/
-        return fetch(`${this.baseUrl}`)
+    getCommits(userName) {
+        return fetch(`${this.baseUrl}${userName}`)
         .then(res => {
             return this._getResponseData(res) 
         })

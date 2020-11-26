@@ -11,6 +11,8 @@
 @import url(../blocks/swiper-wrapper.css);
 @import url(../blocks/swiper-container.css);
 @import url(../blocks/swiper-slide.css);
+@import url(../blocks/swiper-button-prev.css);
+@import url(../blocks/swiper-button-next.css);
 
 .body {
     width: 100%;
