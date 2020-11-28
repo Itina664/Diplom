@@ -1,21 +1,18 @@
 @media screen and (min-width: 320px) {
   .swiper-pagination {
-    margin: 0 auto;
-    margin-top: 50px;
-    padding-bottom: 24px;
-    width: 60px;
-    height: 8px;
+    top: 280px;
+    /*bottom: 60px;*/
   }
 }
 
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
   .swiper-pagination {
-    margin-top: 80px;
-    padding-bottom: 80px;
-    width: 40px;
+    bottom: 30px;
   }
-}
+}*/
 
-.swiper-pagination:hover {
-  cursor: pointer;
+@media screen and (min-width: 1440px) {
+  .swiper-pagination {
+    top: 350px;
+  }
 }

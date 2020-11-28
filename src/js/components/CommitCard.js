@@ -2,7 +2,7 @@ import { formateDateWords } from '../utils/formateDateWords';
 
 export default class CommitCard {
 
-    create(date, message, email, name, avatar) {
+    create(date, message, email, name, avatar, url) {
         const commit = document.createElement('a');
         const commitAvatar = document.createElement('div');
         const commitDate = document.createElement('p');
@@ -50,11 +50,11 @@ export default class CommitCard {
         personMail.textContent = email;
         commitAvatar.style.backgroundImage = `url(${avatar})`;
         
-        /*this.cardDate = cardDate;
-        this.cardTitle = cardTitle;
-        this.cardText = cardText;
-        this.cardInfoagency = cardInfoagency;
-        this.url = url;*/
+        this.url = url;
+
+        commit.addEventListener('click', () => {
+          window.open(url);
+        });
 
         return commit;
     };   

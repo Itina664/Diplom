@@ -13,6 +13,7 @@
 @import url(../blocks/swiper-slide.css);
 @import url(../blocks/swiper-button-prev.css);
 @import url(../blocks/swiper-button-next.css);
+@import url(../blocks/swiper-button_disabled.css);
 
 .body {
     width: 100%;

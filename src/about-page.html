@@ -77,7 +77,7 @@
         <div class="section-author__text">
           <h1 class="section-author__caption">Об авторе</h1>
           <p class="section-author__comment">Меня зовут Ирина Шмигельская.</p>
-          <p class="section-author__comment">В процессе обучения на курсе Практикума я обучилась верстке, базовым навыкам JS, составлению и обработке запросов на сервер, методологии БЭМ.</p>
+          <p class="section-author__comment">В процессе обучения на курсе Практикума я обучилась верстке, базовым навыкам JS, составлению и обработке запросов на сервер, методологии БЭМ, работе с библиотекой для слайдов.</p>
           <p class="section-author__comment">В работе использую технологии HTML5, CSS3, JS, Webpack, Git.</p>
           <p class="section-author__comment">Потенциальным заказчикам могу быть полезной в части создания и поддержки небольших сайтов.</p>
         </div>
@@ -87,23 +87,22 @@
     <div class="section-commit">
       <div class="section-result__title-container">
         <p class="section-result__name">История коммитов из&nbsp;Github</p>
-        <a href="https://github.com/Itina664/Diplom" target="blank" class="section-result__link">
-          <p class="section-result__button-link">Открыть в Github &gt;</p>
+        <a href="https://github.com/Itina664/Diplom" target="blank" class="section-result__link section-result__link_hidden">
+          <p class="section-result__button-github">Открыть в Github &gt;</p>
         </a>
       </div>
 
-
       <div class="swiper-container">
         <div class="swiper-wrapper">
-
-        </div>
-      
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination">
-          <!--<img src="<%=require('./images/3-points.png')%>" alt="Кнопки для пролистывания сладера" class="section-commit__points">-->
-        </div>
-    </div>
+          <!--карточки с коммитами-->
+        </div>   
+        <div class="swiper-button-prev swiper-button_disabled"></div>
+        <div class="swiper-button-next swiper-button_disabled"></div>
+        <div class="swiper-pagination"></div>
+        <a href="https://github.com/Itina664/Diplom" target="blank" class="section-result__link-320 section-result__link-320_hidden">
+          <button type="button" class="section-result__button-github-320">Открыть в Github</button>
+        </a>
+      </div>
     
   </div>
     <footer class="footer">

@@ -10,33 +10,50 @@ const commitCard = new CommitCard();
 const commitCardList = new CommitCardList(swiperWrapper, commitCard);
 
 function requestUserRepos() {
-    githubApi.getCommits('itina664/Diplom/commits')
-        .then((data) => {
-                console.log(data);
-                commitCardList.render(data);
-        })
-        .catch((err) => {
-            console.log(`ошибка запроса ${err}`);
-        })
-        .then(() => {
-          const swiper = new Swiper('.swiper-container', {
-            direction: 'horizontal',
-            slidesPerVew: 3,
-            speed: 400,
-            spaceBetween: 100,
-            centeredSlides: true,
+  githubApi.getCommits('itina664/Diplom/commits')
+    .then((data) => {
+      console.log(data);
+      commitCardList.render(data);
+    })
+    .catch((err) => {
+      console.log(`ошибка запроса ${err}`);
+    })
+    .then(() => {
+      const swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        // Responsive breakpoints
+        breakpoints: {
+        // when window width is >= 320px
+        320: {
+          spaceBetween: 8
+        },
+        // when window width is >= 768px
+        768: {
+          spaceBetween: 8
+        },
+        // when window width is >= 1440px
+        1440: {
+          spaceBetween: 16
+        },
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+        /*dynamicBullets: true,
+        dynamicMainBullets: 1,*/
+      },
           
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          })
-        })   
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  })   
 };
 
 const baseUrl = `https://api.github.com/repos/`;
@@ -48,5 +65,3 @@ import Swiper, { Navigation, Pagination  } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
 const mySwiper = document.querySelector('.swiper-container').swiper;
-/*mySwiper = slideNext();
-mySwiper = slidePrev();*/

@@ -3,16 +3,15 @@
     margin: 0 auto;
     width: 288px;
     height: 264px;
-    background: fff;
     border-radius: 16px;
     background: #fff;
     text-decoration: none;
+    cursor: pointer;
   }
 }
 
 @media screen and (min-width: 768px) {
   .swiper-slide {
-    margin-right: 8px;
     width: 336px;
     height: 242px;
   }
@@ -20,7 +19,6 @@
 
 @media screen and (min-width: 1440px) {
   .swiper-slide {
-    margin-right: 16px;
     width: 400px;
     height: 288px;
   }

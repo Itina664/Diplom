@@ -1,0 +1,28 @@
+@media screen and (min-width: 320px) {
+    .section-result__button-github-320 {
+        padding: 0;
+        top: 320px;
+        bottom: 32px;
+        width: 288px;
+        height: 56px;
+        background: #fff;
+        border-radius: 80px;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        border: 1px solid #1a1b22;
+        color: #1a1b22;
+        cursor: pointer;
+        position: absolute; 
+        z-index: 20;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .section-result__button-github-320_hidden {
+        display: none;
+    }
+}
