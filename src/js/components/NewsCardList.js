@@ -5,8 +5,8 @@ export default class NewsCardList {
     this.QUANTITY_CARDS_ON_PAGE = options.QUANTITY_CARDS_ON_PAGE;
   };
 
-  addCard (date, text, title, infoagency, link, url)  {
-    this.container.appendChild(this.card.create(date, text, title, infoagency, link, url));
+  addCard ({date, text, title, infoagency, link, url})  {
+    this.container.appendChild(this.card.create({date, text, link, title, infoagency, url}));
   };
 
   render(result) {
@@ -32,7 +32,7 @@ export default class NewsCardList {
 
   showMore() {
     this.resultThreeCards.slice(0, this.QUANTITY_CARDS_ON_PAGE).forEach((item) => {
-      this.addCard(item.publishedAt, item.description, item.title, item.source.name, item.urlToImage, item.url);
+      this.addCard({date: item.publishedAt, text: item.description, title: item.title, infoagency: item.source.name, link: item.urlToImage, url: item.url});
     });
     this.resultThreeCards = this.resultThreeCards.slice(this.QUANTITY_CARDS_ON_PAGE);
   };

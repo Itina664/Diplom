@@ -62,7 +62,10 @@ import "./css-pages/main-page.css";
                     titleResult.classList.remove('section-result__title-container_hidden');
                 } else {
                     titleResult.classList.add('section-result__title-container_hidden');
-                    sectionNotfound.classList.remove('section-notfound_hidden');
+                    sectionNotfound.classList.remove('section-notfound_hidden'); 
+                    requestInput.removeAttribute('disabled');
+                    sectionSearchButton.removeAttribute('disabled');
+                    sectionResultButtonMore.classList.add('section-result__button-more_hidden');
                     return;
                 }
             })
@@ -77,7 +80,8 @@ import "./css-pages/main-page.css";
             cardsContainer.innerHTML = '';
             titleResult.classList.add('section-result__title-container_hidden');
             sectionNotfound.classList.add('section-notfound_hidden');
-            sectionResultButtonMore.classList.add('section-result__button-more_hidden')
+            sectionResultButtonMore.classList.add('section-result__button-more_hidden');
+           
         };
         cardsContainer.innerHTML = '';
         titleResult.classList.add('section-result__title-container_hidden');

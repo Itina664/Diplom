@@ -2,7 +2,7 @@ import { formateDateWords } from '../utils/formateDateWords';
 
 export default class NewsCard {
 
-    create(date, text, title, infoagency, link, url) {
+    create({date, title, infoagency, link, text, url}) {
         const card = document.createElement('a');
         const cardImage = document.createElement('div');
         const cardDate = document.createElement('p');
@@ -30,10 +30,6 @@ export default class NewsCard {
         cardInfoagency.textContent = infoagency;
         cardImage.style.backgroundImage = `url(${link})`;
         
-        /*this.cardDate = cardDate;
-        this.cardTitle = cardTitle;
-        this.cardText = cardText;
-        this.cardInfoagency = cardInfoagency;*/
         this.url = url;
 
     card.addEventListener('click', () => {

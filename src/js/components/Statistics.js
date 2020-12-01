@@ -60,14 +60,22 @@ export default class Statistics {
             
             if (this.dataStorage.getArticles()[j].title !== null) {
               countTitleMentions[j] = (this.dataStorage.getArticles()[j].title.toLowerCase().match(this.keyWord) || []).length;
-            } else {
+              console.log(`если встретилось упоминание в заголовке, countTitleMentions [${j}] = ${countTitleMentions[j]}`);
+              console.log(`this.keyWord = ${this.keyWord}`);
+            }; /*else {
               countTitleMentions[j] = 0;
-            }
+              console.log(`если не встретилось упоминание в заголовке, countTitleMentions [${j}] = ${countTitleMentions[j]}`);
+            };*/
             if (this.dataStorage.getArticles()[j].description !== null) {
+              console.log(`description [${j}] = ${this.dataStorage.getArticles()[j].description}`);
+
               countDescriptionMentions[j] = (this.dataStorage.getArticles()[j].description.toLowerCase().match(this.keyWord) || []).length;
-            } else {
+              console.log(`если встретилось упоминание в тексте, countDescriptionMentions [${j}] = ${countDescriptionMentions[j]}`);
+              console.log(`this.keyWord = ${this.keyWord}`);
+            }; /*else {
               countDescriptionMentions[j] = 0;
-            }
+              console.log(`если не встретилось упоминание в тексте, countDescriptionMentions [${j}] = ${countDescriptionMentions[j]}`);
+            }*/
     
             countDate = countDate + countTitleMentions[j] + countDescriptionMentions[j];
             countDateResult = Math.ceil((countDate / this.dataStorage.getTotalResults()) * 100);
