@@ -27,11 +27,8 @@ import "./css-pages/main-page.css";
 
     function lastRequest() {
         if  (dataStorage.getArticles() !== null) {
-            console.log(dataStorage.getArticles());
             requestInput.value = dataStorage.getRequest();
-            console.log(`requestInput.value = ${requestInput.value}`);
             cardsContainer.innerHTML = '';
-            
             newsCardList.render(dataStorage.getArticles());
             titleResult.classList.remove('section-result__title-container_hidden');
         } else {
@@ -51,8 +48,6 @@ import "./css-pages/main-page.css";
             newsApi.getNewsCards(requestInput.value)//вызываем запрос новостей
             .then((data) => {
                 if (data.articles.length !== 0) {
-                    console.log(`данные по запросу`);
-                    console.log(data);
                     dataStorage.setData(data);
                     dataStorage.getData();
                     dataStorage.setRequest(requestInput);
