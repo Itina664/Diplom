@@ -1,5 +1,5 @@
 @media screen and (min-width: 320px) {
-    .section-result__button {
+    .section-result__button-more {
         margin: 0 auto;
         padding: 0;
         margin-left: calc((100% - 288px) / 2);
@@ -21,7 +21,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .section-result__button {
+    .section-result__button-more {
         margin: 0 auto;
         margin-left: calc((100% - 288px) / 2);
         margin-right: calc((100% - 288px) / 2);
@@ -30,7 +30,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .section-result__button {
+    .section-result__button-more {
         margin: 0 auto;
         margin-left: calc((100% - 288px) / 2);
         margin-right: calc((100% - 288px) / 2);
@@ -39,11 +39,11 @@
     }
 }
 
-.section-result__button:hover {
+.section-result__button-more:hover {
     opacity: .9;
     cursor: pointer;
 }
 
-.section-result__button_hidden {
+.section-result__button-more_hidden {
     display: none;
 }

@@ -1,12 +1,11 @@
-@media screen and (min-width: 320px) {
-  .section-result__link_hidden {
-    display: none;
-  }
-}
-
-
-@media screen and (min-width: 768px) {
-    .section-result__link {
-        text-decoration: none;
+/*@media screen and (min-width: 768px) {*/
+  .section-result__link {
+    display: flex;
+    text-decoration: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1a1b22;
     }
-}

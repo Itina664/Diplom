@@ -1,8 +1,8 @@
-//класс для отрисовки карточек на странице
 export default class NewsCardList {
-  constructor(cardsContainer, card) {
-    this.container = cardsContainer;
-    this.card = card;
+  constructor(options) {
+    this.container = options.cardsContainer;
+    this.card = options.card;
+    this.QUANTITY_CARDS_ON_PAGE = options.QUANTITY_CARDS_ON_PAGE;
   };
 
   addCard (date, text, title, infoagency, link, url)  {
@@ -10,30 +10,30 @@ export default class NewsCardList {
   };
 
   render(result) {
-    const button = document.querySelector('.section-result__button');
-    this.resultForCut = result;
+    const button = document.querySelector('.section-result__button-more');
+    this.resultThreeCards = result;
 
     this.showMore();
 
-    if (this.resultForCut.length > 0) {
-      button.classList.remove('section-result__button_hidden');
+    if (this.resultThreeCards.length > 0) {
+      button.classList.remove('section-result__button-more_hidden');
       button.addEventListener('click', () => {
-        if (this.resultForCut.length > 3) { 
-          this.showMore(this.resultForCut, button);
+        if (this.resultThreeCards.length > 3) { 
+          this.showMore(this.resultThreeCards, button);
         } else {
-          button.classList.add('section-result__button_hidden');
-          this.showMore(this.resultForCut, button);
+          button.classList.add('section-result__button-more_hidden');
+          this.showMore(this.resultThreeCards, button);
         }
       });
     } else {
-      button.classList.add('section-result__button_hidden');
+      button.classList.add('section-result__button-more_hidden');
     }     
   };
 
   showMore() {
-    this.resultForCut.slice(0, 3).forEach((item) => {
+    this.resultThreeCards.slice(0, this.QUANTITY_CARDS_ON_PAGE).forEach((item) => {
       this.addCard(item.publishedAt, item.description, item.title, item.source.name, item.urlToImage, item.url);
     });
-    this.resultForCut = this.resultForCut.slice(3);
+    this.resultThreeCards = this.resultThreeCards.slice(this.QUANTITY_CARDS_ON_PAGE);
   };
 }

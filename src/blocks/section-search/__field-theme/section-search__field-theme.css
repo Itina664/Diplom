@@ -22,12 +22,14 @@
 @media screen and (min-width: 768px) {
     .section-search__field-theme {
         padding-left: 25px; 
+        width: calc(100% - 160px);
     }
 }
 
 @media screen and (min-width: 1440px) {
     .section-search__field-theme {
-        height: 64px; 
+        height: 64px;
+        width: calc(100% - 168px); 
     }
 }
 

@@ -1,0 +1,2 @@
+export const QUANTITY_CARDS_ON_PAGE = 3;
+console.log(QUANTITY_CARDS_ON_PAGE);

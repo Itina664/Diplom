@@ -1,17 +1,20 @@
 export default class NewsApi {
-    constructor(baseUrl, apiKey) {
-      this.baseUrl = baseUrl;
-      this.apiKey = apiKey
+    constructor(options) {
+      this.baseUrl = options.baseUrl;
+      this.apiKey = options.apiKey;
+      this.lastday = options.lastday;
+      this.today = options.today;
     }
+/*baseUrl, apiKey, lastday, today*/
 
-    getNewsCards(request, lastday, today) {
+    getNewsCards(request) {
 
         return fetch(`${this.baseUrl}` + new URLSearchParams({
+            apiKey: this.apiKey, 
             q: request,
-            from: lastday,
-            to: today,
-            sortBy: 'publishedAt',
-            apiKey: this.apiKey 
+            from: this.lastday,
+            to: this.today,
+            sortBy: 'publishedAt',   
         }))
         /*return fetch(`${this.baseUrl}q=${request}&from=${today}&apiKey=${this.apiKey}`)*/
         .then(res => {
