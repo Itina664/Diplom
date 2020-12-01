@@ -31,7 +31,10 @@ export default class NewsCardList {
   };
 
   showMore() {
+    console.log(`this.resultThreeCards =`);
+    console.log(this.resultThreeCards);
     this.resultThreeCards.slice(0, this.QUANTITY_CARDS_ON_PAGE).forEach((item) => {
+      
       this.addCard({date: item.publishedAt, text: item.description, title: item.title, infoagency: item.source.name, link: item.urlToImage, url: item.url});
     });
     this.resultThreeCards = this.resultThreeCards.slice(this.QUANTITY_CARDS_ON_PAGE);

@@ -26,11 +26,13 @@ import "./css-pages/main-page.css";
     const formattedTodayDigits = formateDateDigits(new Date());
 
     function lastRequest() {
-        if  (dataStorage.getData() !== 0) {
-            const lastDataStorage = dataStorage.getArticles();
+        if  (dataStorage.getArticles() !== null) {
+            console.log(dataStorage.getArticles());
             requestInput.value = dataStorage.getRequest();
+            console.log(`requestInput.value = ${requestInput.value}`);
             cardsContainer.innerHTML = '';
-            newsCardList.render(lastDataStorage);
+            
+            newsCardList.render(dataStorage.getArticles());
             titleResult.classList.remove('section-result__title-container_hidden');
         } else {
             //активизируем поиск новостей по кнопке сабмит на форме
