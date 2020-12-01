@@ -3,15 +3,10 @@ import DataStorage from './js/modules/DataStorage.js';
 import NewsCard from './js/components/NewsCard.js';
 import NewsCardList from './js/components/NewsCardList.js';
 import SearchInput from './js/components/SearchInput.js';
-
 import { formateDateDigits } from './js/utils/formateDateDigits';
-
 import { LASTDAY_TIMESTAMP } from './js/constants/lastdayTimestamp';
-
 import { QUANTITY_CARDS_ON_PAGE } from './js/constants/quantityCardsOnPage';
-
 import "./css-pages/main-page.css";
-
 
     const cardsContainer = document.querySelector('.section-result__cards-container');
     const errorTheme = document.querySelector('.section-search__error-theme');
@@ -23,12 +18,10 @@ import "./css-pages/main-page.css";
     const titleResult = document.querySelector('.section-result__title-container_hidden');
     const sectionSearchButton = document.querySelector('.section-search__button');
     const sectionResultButtonMore = document.querySelector('.section-result__button-more');
-    
     const newsCard = new NewsCard();//создание карточки с новостью
     const newsCardList = new NewsCardList({cardsContainer: cardsContainer, card: newsCard, QUANTITY_CARDS_ON_PAGE: QUANTITY_CARDS_ON_PAGE});//создание контейнера с карточками новостей
     const searchInput = new SearchInput(formSearch);//активизируем работу с инпутом
     const dataStorage = new DataStorage();
-
     const formattedLastdayDigits = formateDateDigits(new Date() - new Date(LASTDAY_TIMESTAMP));
     const formattedTodayDigits = formateDateDigits(new Date());
 
