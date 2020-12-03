@@ -1,0 +1,1 @@
+export const QUANTITY_CARDS_ON_PAGE = 3;

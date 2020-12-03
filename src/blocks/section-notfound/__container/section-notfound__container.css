@@ -1,0 +1,9 @@
+.section-notfound__container {
+    width: 50%;
+    margin: 0;
+    margin: auto;
+    padding-top: 86px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}

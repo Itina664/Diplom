@@ -1,17 +1,15 @@
-# Diploma
-Praktikum. Ending of course Fronted.
+Яндекс.Практикум. Курс обучения фронтенду.
 
-[https://github.com/Itina664/Diplom.git]
+## Дипломная работа.
 
-Creation of training site News Analyzer:
+## Тема: Создание сайта для анализа популярности новостей по задаваемому ключевому слову.
 
-https://itina664.github.io/Diplom/
+### Учебный проект для закрепления материала курса.
 
-Technologies: JS, CSS, HTML, WebPack, GIT.
+В процессе создания сайта были использованы технологии: JS, CSS, HTML, WebPack, GIT.
 
-Manual for open project from Github:
 
-   put in terminal:
+### Инструкция по развертыванию сайта:
 
 1. git clone <name of repository>,
   
@@ -19,4 +17,13 @@ Manual for open project from Github:
 
 3. npm run dev,
 
-4. npm run deploy
+4. npm run deploy.
+
+
+Ссылка на сайт:
+
+https://itina664.github.io/Diplom/
+
+Ссылка на проект на github.com:
+
+[https://github.com/Itina664/Diplom.git]

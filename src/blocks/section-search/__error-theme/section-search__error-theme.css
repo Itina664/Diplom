@@ -1,0 +1,18 @@
+.section-search__error-theme {
+    margin: 0;
+    width: 100%;
+    border: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: red;
+    display: none;
+}
+  
+.section-search__error-theme_active {
+    display: block;
+    
+}
+  

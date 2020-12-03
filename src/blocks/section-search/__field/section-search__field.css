@@ -1,0 +1,33 @@
+@media screen and (min-width: 320px) {
+    .section-search__field {
+        margin: 0 auto;
+        margin-top: 12px;
+        height: 128px;
+        border: none;
+        background: none;
+        display: flex; 
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-search__field {
+        margin: 0;
+        margin-top: 10px;
+        height: 56px;
+        background: #fff;
+        box-sizing: border-box;
+        border-radius: 100px;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-search__field {
+        margin: 0;
+        margin-top: 10px;
+        height: 64px;  
+    }
+}
+

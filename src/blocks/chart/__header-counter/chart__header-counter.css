@@ -1,0 +1,12 @@
+.chart__header-counter {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: #b6bcbf;
+    width: calc(100% - 110px);
+}

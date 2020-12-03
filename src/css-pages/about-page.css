@@ -1,0 +1,32 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/section-author/section-author.css);
+@import url(../blocks/section-clients/section-clients.css);
+@import url(../blocks/section-technology/section-technology.css);
+@import url(../blocks/section-result/section-result.css);
+@import url(../blocks/section-commit/section-commit.css);
+@import url(../blocks/swiper-pagination.css);
+@import url(../blocks/swiper-wrapper.css);
+@import url(../blocks/swiper-container.css);
+@import url(../blocks/swiper-slide.css);
+@import url(../blocks/swiper-button-prev.css);
+@import url(../blocks/swiper-button-next.css);
+@import url(../blocks/swiper-button_disabled.css);
+
+.body {
+    width: 100%;
+    background-color: #fff;
+}
+
+.page-about {
+  width: 100%;
+  margin: 0;
+}
+
+  /*@media screen and (max-width: 768px) {
+    .user-info {
+      flex-direction: column;
+      align-items: center;
+    }*/

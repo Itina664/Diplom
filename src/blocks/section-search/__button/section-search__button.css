@@ -1,0 +1,39 @@
+@media screen and (min-width: 320px) {
+    .section-search__button {
+        width: 288px;
+        height: 56px;
+        background: #2f71e5;
+        border-radius: 100px;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        border: none;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-search__button {
+        width: 160px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-search__button {
+        width: 168px;
+        height: 64px;   
+    }
+}
+
+.section-search__button:hover {
+        background: #347eff;
+        cursor: pointer;
+    }
+
+.section-search__button:focus {        
+    background: #2a65cc;
+    cursor: pointer;
+}
+/*background: #347eff;*/

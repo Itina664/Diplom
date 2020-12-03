@@ -1,0 +1,22 @@
+@import url(./__title-container/section-result__title-container.css);
+@import url(./__name/section-result__name.css);
+@import url(./__cards-container/section-result__cards-container.css);
+@import url(./__card-link/section-result__card-link.css);
+@import url(./__card-date/section-result__card-date.css);
+@import url(./__card-title/section-result__card-title.css);
+@import url(./__card-text/section-result__card-text.css);
+@import url(./__card-infoagency/section-result__card-infoagency.css);
+@import url(./__card-image/section-result__card-image.css);
+@import url(./__button-more/section-result__button-more.css);
+@import url(./__button-github/section-result__button-github.css);
+@import url(./__button-github-320/section-result__button-github-320.css);
+@import url(./__link/section-result__link.css);
+@import url(./__link-320/section-result__link-320.css);
+@import url(./__link-github/section-result__link-github.css);
+
+
+
+.section-result {
+    margin: 0 auto;
+    background: #f5f6f7;
+}

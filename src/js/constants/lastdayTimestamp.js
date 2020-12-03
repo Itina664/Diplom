@@ -1,0 +1,1 @@
+export const LASTDAY_TIMESTAMP = 6 * 24 * 3600 * 1000;

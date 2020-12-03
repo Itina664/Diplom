@@ -1,0 +1,21 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/section-result/section-result.css);
+@import url(../blocks/section-search/section-search.css);
+@import url(../blocks/section-preloader/section-preloader.css);
+@import url(../blocks/section-notfound/section-notfound.css);
+@import url(../blocks/section-author/section-author.css);
+@import url(../blocks/section-error-server/section-error-server.css);
+
+
+.body {
+  width: 100%;
+  background-color: #fff;
+}
+
+.page-about {
+width: 100%;
+margin: 0;
+}

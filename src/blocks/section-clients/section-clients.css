@@ -1,0 +1,7 @@
+@import url(./__caption/section-clients__caption.css);
+@import url(./__comment/section-clients__comment.css);
+@import url(./__container/section-clients__container.css);
+
+.section-clients {
+    width: 100%;
+}

@@ -1,0 +1,15 @@
+@import url(./__button/section-search__button.css);
+@import url(./__field/section-search__field.css);
+@import url(./__field-theme/section-search__field-theme.css);
+@import url(./__subtitle/section-search__subtitle.css);
+@import url(./__title/section-search__title.css);
+@import url(./__container/section-search__container.css);
+@import url(./__error-theme/section-search__error-theme.css);
+@import url(./__form/section-search__form.css);
+
+.section-search {
+    margin: 0; 
+    width: 100%;
+    background-image: url('../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png');
+    background-size: cover;
+}

@@ -1,0 +1,12 @@
+.header__bg {
+    margin: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(196, 196, 196, .01);
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, .2);
+}
+
+.header__bg_white {
+    background: #fff;
+    box-shadow: inset 0px -1px 0px #d1d2d6;
+}

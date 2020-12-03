@@ -1,0 +1,24 @@
+@media screen and (min-width: 320px) {
+    .section-technology__items {
+        width: 100%;
+        margin: 0;
+        padding-top: 39px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-technology__items {
+        display: flex;
+        justify-content: space-between;
+    } 
+}  
+
+@media screen and (min-width: 1440px) {
+    .section-technology__items {
+        padding-top: 30px;
+        width: calc(90px * 5 + 70px * 3);  
+    }
+}
