@@ -89,7 +89,7 @@ import "./css-pages/main-page.css";
         searchInput.reset(errorTheme);
     });
 
-    //создаем параметры запроса
+    //создаем параметры запроса на сервер
     const baseUrl = 'https://nomoreparties.co/news/v2/everything?';
     const apiKey = '1a858822884a439da615fc1a0286a8d8';
     const newsApi = new NewsApi({ baseUrl: baseUrl, apiKey: apiKey, lastday: formattedLastdayDigits, today: formattedTodayDigits});
