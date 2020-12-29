@@ -91,7 +91,7 @@ import "./css-pages/main-page.css";
 
     //создаем параметры запроса
     const baseUrl = 'https://nomoreparties.co/news/v2/everything?';
-    const apiKey = '086a02d9d4244c469d1aba48e9b1dd8f';
+    const apiKey = '1a858822884a439da615fc1a0286a8d8';
     const newsApi = new NewsApi({ baseUrl: baseUrl, apiKey: apiKey, lastday: formattedLastdayDigits, today: formattedTodayDigits});
     
     //активизируем поиск новостей по кнопке сабмит на форме
